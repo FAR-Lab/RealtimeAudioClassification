@@ -1,7 +1,7 @@
-    #!/usr/bin/env python
+#!/usr/bin/env python
 # coding: utf-8
 import pyaudio
-import librosa
+#import librosa
 import numpy as np
 from numpy_ringbuffer import RingBuffer
 import matplotlib.pyplot as plt
@@ -23,6 +23,7 @@ from time import sleep
 import cv2 as cv
 import time
 
+print(torch.__version__)
 
 dimension=300 # Required for mobile net
 pictureTimeLength = 1
