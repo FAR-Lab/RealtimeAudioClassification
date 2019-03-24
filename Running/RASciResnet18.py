@@ -114,13 +114,18 @@ def infere_Class_Type():
         return;
 
     audio_data = np.array(ringBuffer)
-    print("Signal energy",np.sum(np.square(audio_data)))
+    #print("Signal energy",np.sum(np.square(audio_data)))
+    #print("max befor",np.max(np.absolute(audio_data)))
+
+    audio_data *= (1/(np.max(np.absolute(audio_data))))
+    #print("max after",np.max(np.absolute(audio_data)))
+
     #librosa.util.normalize(audio_data)
     #if(len( ringBuffer)<=1):
 #              return;
     #audio_data = np.load("test.npy")
     #print(audio_data.shape)
-    freqs, times, spec = signal.spectrogram(audio_data,fs=TargetSampleRate,window='hann',nperseg=nperseg,noverlap=noverlap)#,scaling ='spectrum')
+    _, _, spec = signal.spectrogram(audio_data,fs=TargetSampleRate,window='hann',nperseg=nperseg,noverlap=noverlap)#,scaling ='spectrum')
     #freqs, times, spec = signal.spectrogram(audio_data,fs=TargetSampleRate,window='hann')#,scaling ='spectrum')
     #print(len(freqs))
     log_specgram = np.log(spec.astype(np.float32) + eps)
@@ -141,8 +146,8 @@ def infere_Class_Type():
     img = img[:,:,0:3]
     #plt.imshow(img)
     ##
-    #cv.imshow('dst_rt', img)
-    #cv.waitKey(1)
+    cv.imshow('dst_rt', img)
+    cv.waitKey(1)
     ##
     if(log_specgram.shape[1]<224):
         return;
