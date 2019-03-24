@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 import pyaudio
-import librosa
+
 import numpy as np
 from numpy_ringbuffer import RingBuffer
 import matplotlib.pyplot as plt
