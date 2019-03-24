@@ -165,7 +165,8 @@ stream = pa.open(format=pyaudio.paFloat32,
                  rate=44100,
                  output=False,
                  input=True,
-                 stream_callback=callback)
+                 stream_callback=callback,
+                 input_device_index=2)
 def startProgram(targetLength=20):
 
     stream.start_stream()
