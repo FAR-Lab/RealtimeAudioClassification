@@ -1,4 +1,4 @@
-    #!/usr/bin/env python
+#!/usr/bin/env python
 # coding: utf-8
 import pyaudio
 import librosa
@@ -22,76 +22,23 @@ from threading import Thread
 from time import sleep
 import cv2 as cv
 
-
-dimension=300 # Required for mobile net
+dimension=224 # Required for mobile net
 pictureTimeLength = 1
 TargetSampleRate = 44100
 
+
+
 classes = ['air_conditioner', 'car_horn', 'children_playing', 'dog_bark', 'drilling', 'engine_idling', 'gun_shot', 'jackhammer', 'siren', 'street_music']
+model  = models.resnet18(pretrained=False)
+stateDict = torch.load("../models/ResNet18SciPy.pth", map_location=lambda storage, loc: storage);
 
-class Net(nn.Module):  # Mobile Net
-    def __init__(self):
-        super(Net, self).__init__()
+new_stateDict={}
+for key in model.state_dict().keys():
+    new_stateDict[key]=stateDict[key]
 
-        def conv_bn(inp, oup, stride):
-            return nn.Sequential(
-                nn.Conv2d(inp, oup, 3, stride, 1, bias=False),
-                nn.BatchNorm2d(oup),
-                nn.ReLU(inplace=True)
-            )
-
-        def conv_dw(inp, oup, stride):
-            return nn.Sequential(
-                nn.Conv2d(inp, inp, 3, stride, 1, groups=inp, bias=False),
-                nn.BatchNorm2d(inp),
-                nn.ReLU(inplace=True),
-
-                nn.Conv2d(inp, oup, 1, 1, 0, bias=False),
-                nn.BatchNorm2d(oup),
-                nn.ReLU(inplace=True),
-            )
-
-        self.model = nn.Sequential(
-            conv_bn(  3,  32, 2),
-            conv_dw( 32,  64, 1),
-            conv_dw( 64, 128, 2),
-            conv_dw(128, 128, 1),
-            conv_dw(128, 256, 2),
-            conv_dw(256, 256, 1),
-            conv_dw(256, 512, 2),
-            conv_dw(512, 512, 1),
-            conv_dw(512, 512, 1),
-            conv_dw(512, 512, 1),
-            conv_dw(512, 512, 1),
-            conv_dw(512, 512, 1),
-            conv_dw(512, 1024, 2),
-            conv_dw(1024, 1024, 1),
-            nn.AvgPool2d(7),
-        )
-        self.fc = nn.Linear(1024, 1000)
-
-    def forward(self, x):
-        x = self.model(x)
-        x = x.view(-1, 1024)
-        x = self.fc(x)
-        return x
-model = Net()
-
-
-
-model.load_state_dict(torch.load("../models/MobileNetSciPy.pth", map_location=lambda storage, loc: storage));
+model.load_state_dict(new_stateDict)
 model.cpu()
 model.eval()
-
-SamplesPerPicture = pictureTimeLength * TargetSampleRate
-nTimeBin =dimension+1 # width
-nFreqBin =dimension+1 # height
-eps=1e-10
-
-nperseg =int(2*(nFreqBin-1))
-noverlap = int(np.floor((SamplesPerPicture - nTimeBin*nperseg)/(1-nTimeBin)))
-
-
 
 def imshow(img):
     img = img / 2 + 0.5     # unnormalize
@@ -122,31 +69,20 @@ def audio_interfaces():
 print(audio_interfaces())
 
 
-# In[ ]:
-#TARGETSampleRate = 22050
-#n_fft = 1024
-#hop_length = 256
-#n_mels = 224
-#fmin = 20
-#fmax = TARGETSampleRate / 2
 
+SamplesPerPicture = pictureTimeLength * TargetSampleRate
+nTimeBin =dimension+1 # width
+nFreqBin =dimension+1 # height
+eps=1e-10
 
-TARGETSampleRate = TargetSampleRate
-n_fft = 2048
-hop_length = 128 #64 #256
-n_mels = 224
-fmin = 20 #60
-fmax = TARGETSampleRate / 2
+nperseg =int(2*(nFreqBin-1))
+noverlap = int(np.floor((SamplesPerPicture - nTimeBin*nperseg)/(1-nTimeBin)))
 
-
-SampleRate = TargetSampleRate
-
-ringBuffer = RingBuffer(pictureTimeLength * SampleRate,np.float32)
+ringBuffer = RingBuffer(pictureTimeLength * TargetSampleRate,np.float32)
 #ringBuffer = RingBuffer(28672)
 pa = pyaudio.PyAudio()
 running = True
 MemoryInUse=False
-
 
 # In[ ]:
 
@@ -164,6 +100,9 @@ def callback(in_data, frame_count, time_info, flag):
     return None, pyaudio.paContinue
 
 
+# In[ ]:
+
+
 def infere_Class_Type():
     #n_fft = 1024
     #hop_length = 256
@@ -175,27 +114,13 @@ def infere_Class_Type():
         return;
 
     audio_data = np.array(ringBuffer)
-
+    #librosa.util.normalize(audio_data)
     #if(len( ringBuffer)<=1):
-    #return;
+#              return;
     #audio_data = np.load("test.npy")
     #print(audio_data.shape)
-    #buffLength = 1*TARGETSampleRate
-    #targetTimeBins = 300
-    #timePasedPerImage=1
-
-    #duration =0.25
-    #window_size=40
-    #step_size=20
-    #eps=1e-10
-
-    #nperseg = int(round(window_size * TARGETSampleRate / 1e3))
-    #nperseg = int(round(duration*TARGETSampleRate))
-
-    #print("blub",nperseg,noverlap);
-    #noverlap = int(round(step_size * TARGETSampleRate / 1e3))
-    freqs, times, spec = signal.spectrogram(audio_data,fs=TARGETSampleRate,window='hann',nperseg=nperseg,noverlap=noverlap)#,scaling ='spectrum')
-    #freqs, times, spec = signal.spectrogram(audio_data,fs=TARGETSampleRate,window='hann')#,scaling ='spectrum')
+    freqs, times, spec = signal.spectrogram(audio_data,fs=TargetSampleRate,window='hann',nperseg=nperseg,noverlap=noverlap)#,scaling ='spectrum')
+    #freqs, times, spec = signal.spectrogram(audio_data,fs=TargetSampleRate,window='hann')#,scaling ='spectrum')
     #print(len(freqs))
     log_specgram = np.log(spec.astype(np.float32) + eps)
     #log_specgram = spec.T
@@ -206,7 +131,7 @@ def infere_Class_Type():
     #mel_spec_db = librosa.power_to_db(mel_spec_power, ref=np.max)
     #print(mel_spec_db.shape[1],"resulting Spectrum and associated ring buffer: ",len(ringBuffer))
     image=log_specgram[0:dimension,0:dimension]
-    #print(log_specgram.shape)
+
     im = plt.imshow(image)
     colors = im.cmap(im.norm(image))
     data = colors.astype(np.float64) / np.max(colors) # normalize the data to 0 - 1
@@ -216,8 +141,7 @@ def infere_Class_Type():
     #plt.imshow(img)
     cv.imshow('dst_rt', img)
     cv.waitKey(1)
-
-    if(log_specgram.shape[1]<dimension):
+    if(log_specgram.shape[1]<224):
         return;
     imagesTensor = transform(img)
     imagesTensor = Variable(imagesTensor, requires_grad=True)
@@ -231,14 +155,14 @@ def infere_Class_Type():
 
     prob=prob[0].detach().numpy()
     print('---')
-    for  j in range(k):
-        if prob[j] > 00.0:
+    for  j in range(k-1):
+        if prob[j] > (2+prob[j+1]):
             print('Predicted:\t{} \t| Probablilty: \t{:f}'.format(classes[predicted[j]],prob[j]))
 
 
 stream = pa.open(format=pyaudio.paFloat32,
                  channels=1,
-                 rate=TARGETSampleRate,
+                 rate=44100,
                  output=False,
                  input=True,
                  stream_callback=callback)
