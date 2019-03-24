@@ -66,7 +66,7 @@ def audio_interfaces():
                 interfaces.append(data)
         p.terminate()
         return interfaces
-print(audio_interfaces())
+#print(audio_interfaces())
 
 
 
@@ -114,6 +114,7 @@ def infere_Class_Type():
         return;
 
     audio_data = np.array(ringBuffer)
+    print("Signal energy",np.sum(np.square(audio_data)))
     #librosa.util.normalize(audio_data)
     #if(len( ringBuffer)<=1):
 #              return;
@@ -139,8 +140,10 @@ def infere_Class_Type():
     img = data.astype(np.uint8)
     img = img[:,:,0:3]
     #plt.imshow(img)
-    cv.imshow('dst_rt', img)
-    cv.waitKey(1)
+    ##
+    #cv.imshow('dst_rt', img)
+    #cv.waitKey(1)
+    ##
     if(log_specgram.shape[1]<224):
         return;
     imagesTensor = transform(img)
@@ -165,8 +168,7 @@ stream = pa.open(format=pyaudio.paFloat32,
                  rate=44100,
                  output=False,
                  input=True,
-                 stream_callback=callback,
-                 input_device_index=2)
+                 stream_callback=callback) # input_device_index=2
 def startProgram(targetLength=20):
 
     stream.start_stream()
