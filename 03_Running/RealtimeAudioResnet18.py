@@ -23,7 +23,7 @@ import time
 
 classes = ['air_conditioner', 'car_horn', 'children_playing', 'dog_bark', 'drilling', 'engine_idling', 'gun_shot', 'jackhammer', 'siren', 'street_music']
 model  = models.resnet18(pretrained=False)
-model.load_state_dict(torch.load("./models//UrbanSoundResnet18Fft2048Hop128.pth", map_location=lambda storage, loc: storage));
+model.load_state_dict(torch.load("../models//UrbanSoundResnet18Fft2048Hop128.pth", map_location=lambda storage, loc: storage));
 model.cpu()
 model.eval()
 def imshow(img):
