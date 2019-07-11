@@ -20,10 +20,41 @@ import cv2 as cv
 import time
 
 
+print("ExecutingCode");
+ModelPath="../models/CatDogResNet.pth"
 
-classes = ['air_conditioner', 'car_horn', 'children_playing', 'dog_bark', 'drilling', 'engine_idling', 'gun_shot', 'jackhammer', 'siren', 'street_music']
-model  = models.resnet50(pretrained=False)
-model.load_state_dict(torch.load("./models/UrbanSoundsClean", map_location=lambda storage, loc: storage));
+ModelData = torch.load(ModelPath)
+print(ModelData.keys())
+Input_Resolution = ModelData['resolution']
+### Spectograph resolution
+SAMPLE_RATE = 22050
+N_FFT = 1024
+HOP_LENGTH = 256
+N_MELS = Input_Resolution
+FMIN = 20
+FMAX = SAMPLE_RATE / 2 
+
+### Debug Info
+K=2
+
+
+
+model=None
+
+
+foundAModel=False;
+if ModelData['modelType']=="resnet18":
+    model = models.resnet18()
+    foundAModel=True;
+
+if not foundAModel:
+    print("Could not find requested Model. Please provide a network structure for model:",ModelData['modelType'])
+    exit();
+
+model.load_state_dict (ModelData['model'])
+classes = ModelData['classes']
+
+
 model.cpu()
 model.eval()
 def imshow(img):
@@ -44,7 +75,6 @@ def audio_interfaces():
         :return list[AudioInterface]: Audio interfaces data
         """
         p = pyaudio.PyAudio()
-
         interfaces = []
         for i in range(p.get_device_count()):
             data = p.get_device_info_by_index(i)
@@ -52,114 +82,65 @@ def audio_interfaces():
                 interfaces.append(data)
         p.terminate()
         return interfaces
-print(audio_interfaces())
+#print(audio_interfaces())
 
 
-# In[ ]:
-#TARGETSampleRate = 22050
-#n_fft = 1024
-#hop_length = 256
-#n_mels = 224
-#fmin = 20
-#fmax = TARGETSampleRate / 2
 
-
-TARGETSampleRate = 22050
-n_fft = 2048
-hop_length = 128 #64 #256
-n_mels = 224
-fmin = 20 #60
-fmax = TARGETSampleRate / 2
-
-
-SampleRate = TARGETSampleRate
-
-#ringBuffer = RingBuffer(3 * SampleRate,np.float32)
-ringBuffer = RingBuffer(28672)
+ringBuffer = RingBuffer(28672*2)
 pa = pyaudio.PyAudio()
 running = True
-MemoryInUse=False
 
 
-# In[ ]:
 
 
 def callback(in_data, frame_count, time_info, flag):
-    global MemoryInUse
-    global ringBuffer
     audio_data = np.frombuffer(in_data, dtype=np.float32)
-
-    audio_data = librosa.resample(audio_data, 44100, SampleRate)
-    MemoryInUse = True
-    ringBuffer.extend(audio_data)
-    #print(len(ringBuffer)/(3 * SampleRate)*100)
-    MemoryInUse=False
+    audio_data = librosa.resample(audio_data, 44100, SAMPLE_RATE)
+    ringBuffer.extend(audio_data)   
     return None, pyaudio.paContinue
 
 
-# In[ ]:
 
 
 def infere_Class_Type():
-    #n_fft = 1024
-    #hop_length = 256
-    #n_mels = 224
-    #fmin = 20
-    #fmax = SampleRate / 2
     if(not ringBuffer.is_full):
-    #    print(len(ringBuffer))
         return;
 
     audio_data = np.array(ringBuffer)
-
-    #if(len( ringBuffer)<=1):
-#              return;
-    #audio_data = np.load("test.npy")
-    #print(audio_data.shape)
-    mel_spec_power = librosa.feature.melspectrogram(audio_data, sr=SampleRate, n_fft=n_fft,
-                                                hop_length=hop_length,
-                                                n_mels=n_mels, power=2.0,
-                                               fmin=fmin,fmax=fmax)
+    mel_spec_power = librosa.feature.melspectrogram(audio_data, sr=SAMPLE_RATE, n_fft=N_FFT,
+                                                hop_length=HOP_LENGTH,
+                                                n_mels=N_MELS, power=2.0,
+                                               fmin=FMIN,fmax=FMAX)
     mel_spec_db = librosa.power_to_db(mel_spec_power, ref=np.max)
-    #print(mel_spec_db.shape[1],"resulting Spectrum and associated ring buffer: ",len(ringBuffer))
-    image=mel_spec_db[0:224,0:224]
+    
+    image=mel_spec_db[0:Input_Resolution,0:Input_Resolution]
 
     im = plt.imshow(image)
     colors = im.cmap(im.norm(image))
-    data = colors.astype(np.float64) / np.max(colors) # normalize the data to 0 - 1
-    data = 255 * data # Now scale by 255
+    data = colors.astype(np.float64) / np.max(colors)
+    data = 255 * data 
     img = data.astype(np.uint8)
     img = img[:,:,0:3]
-    #plt.imshow(img)
     cv.imshow('dst_rt', img)
     cv.waitKey(1)
-    if(mel_spec_db.shape[1]<224):
+    if(mel_spec_db.shape[1]<Input_Resolution):
         return;
     imagesTensor = transform(img)
     imagesTensor = Variable(imagesTensor, requires_grad=True)
     testImages = imagesTensor.unsqueeze(0)
     outputs = model(testImages)
-    k=3
-    prob, predicted = torch.topk(outputs, k)
-    predicted=predicted[0].numpy()
-    #print(prob)
-    #print(prob.dtype)
 
+    prob, predicted = torch.topk(outputs,K)
+    predicted=predicted[0].numpy()
     prob=prob[0].detach().numpy()
     print('---')
-    for  j in range(k):
-        if prob[j] > 30.0:
+    for  j in range(K):
+        if prob[j] > 14.0:
             print('Predicted:\t{} \t| Probablilty: \t{:f}'.format(classes[predicted[j]],prob[j]))
+    
 
 
-stream = pa.open(format=pyaudio.paFloat32,
-                 channels=1,
-                 rate=44100,
-                 output=False,
-                 input=True,
-                 stream_callback=callback)
 def startProgram(targetLength=20):
-
     stream.start_stream()
     t0 = time.time()
     while stream.is_active():
@@ -170,6 +151,13 @@ def startProgram(targetLength=20):
         if ( targetLength>0 )and ( (time.time()-t0)>=targetLength):
             break;
 
+stream = pa.open(format=pyaudio.paFloat32,
+                 channels=1,
+                 rate=44100,
+                 output=False,
+                 input=True,
+                 stream_callback=callback)
+
 
 if __name__ == '__main__':
     print("Starting Running");
@@ -179,7 +167,3 @@ if __name__ == '__main__':
     pa.terminate()
     stream.close()
 
-
-
-
-# In[ ]:
