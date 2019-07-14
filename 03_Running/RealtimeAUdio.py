@@ -10,7 +10,6 @@ import torch
 import torch.nn.functional as F
 from torchvision import datasets, transforms, models
 import torchvision
-import numpy as np
 import time
 from  numpy_ringbuffer import RingBuffer
 from torch.autograd import Variable
