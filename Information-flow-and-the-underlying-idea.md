@@ -38,4 +38,4 @@ AudioData
 One problematic aspect is, that a lot of data sets are not structured in that way, and come with a .csv file (like a spreadsheet) that associates each file into a class. You will see an example of such a spread sheet when you open the cats-and-dogs audio library.
 For our algorithms to understand the data we need to write small scripts that moves the data into the folder structure mentioned above. 
 
-Have a look at the section **transforming data-sets** In the Setup Notebook. There we show how the data is being transformed and have scripts ready to do that for both the cats-and-dogs data set and the cuban-sounds dataset.
+Have a look at the section **transforming data-sets** In the Setup Notebook. There we show how the data is being transformed and have scripts ready to do that for both the cats-and-dogs data set and the urban-sounds dataset.
