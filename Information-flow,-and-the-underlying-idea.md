@@ -7,7 +7,7 @@ Instead of doing difficult manipulations with `.csv` files we move our class def
 The file names in our case are not important.
 
 In general the structure should always look like the following:
-
+``` shell
 AudioData
 ├── audio-cats-and-dogs
 │   └── cats_dogs
@@ -32,6 +32,7 @@ AudioData
             ├── jackhammer
             ├── siren
             └── street_music
+```
             
 ## Working with existing DataSets
 One problematic aspect is, that a lot of data sets are not structured in that way, and come with a .csv file (like a spreadsheet) that associates each file into a class. You will see an example of such a spread sheet when you open the cats-and-dogs audio library.
