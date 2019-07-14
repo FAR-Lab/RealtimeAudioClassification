@@ -41,3 +41,14 @@ For our algorithms to understand the data we need to write small scripts that mo
 Have a look at the section **transforming data-sets** In the Setup Notebook. There we show how the data is being transformed and have scripts ready to do that for both the cats-and-dogs data set and the urban-sounds dataset.
 
 ## Squishing time  - taking a snapshot
+
+Spectrograms 
+What do they do for us
+Why 224x224
+What is Mel spectrum 
+Whats is hop-length what is fftCount
+
+The values don't matter as much. What is important is consistency among generating and using the system
+We generate data and then we use it to train a normal image net neural nentwork.
+
+
