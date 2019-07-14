@@ -39,3 +39,5 @@ One problematic aspect is, that a lot of data sets are not structured in that wa
 For our algorithms to understand the data we need to write small scripts that moves the data into the folder structure mentioned above. 
 
 Have a look at the section **transforming data-sets** In the Setup Notebook. There we show how the data is being transformed and have scripts ready to do that for both the cats-and-dogs data set and the urban-sounds dataset.
+
+## Squishing time  - taking a snapshot
