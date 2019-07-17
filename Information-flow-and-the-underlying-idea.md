@@ -42,6 +42,8 @@ Have a look at the section **transforming data-sets** In the Setup Notebook. The
 
 ## Squishing time  - taking a snapshot
 
+One of the field neural networks in their current form are very good at are detecting images. The convolutional Neural Networks (CNNs) that are being used for image recognition have become almost ubiquitous and are therefore very easy to play with. 
+In this project we build on that history and convert our audio into spectrograms, which is essentially an image representation of a little audio snippet. After we generated these audio-images we can retrain any standard image classifier to work with our images and help us classify our audio data. 
 Spectrograms 
 What do they do for us
 Why 224x224
