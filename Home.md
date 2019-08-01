@@ -5,6 +5,8 @@ a.k.a.
 ## Overview 
 In this workshop, we will teach you how to design audio classifiers using neural nets. We will guide you through the steps of collecting and organizing data, generating spectrographs, training a network, and the using that network to detect audio in realtime. We will use Jupyter notebooks, Python3, pyTorch, and Librosa to play with neural nets that can detect different music and different audio sources. 
 
+## Provisional Workshop Schedule
+
 ## Labs
 
 [Lab 0. Setting up](Lab-0.-Setting-up)
