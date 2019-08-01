@@ -1,9 +1,11 @@
-## Information flow, and the underlying idea.
+To enable the use of common scripts for different audio detection projects, we have defined a general framework for organizing data for learning.
 
-The scripts in this project are optimized so that you have to change as little code as possible if you want to play with new audio detection projects. To make this work we use a lot of Finder(Mac)/Explorer(win) file manipulation techniques.
+To lessen the work of this data organization, we use a lot of Finder(Mac)/Explorer(win) file manipulation techniques.
 
 ### Defining classes
-Instead of doing difficult manipulations with `.csv` files we move our class definition into folders. Everything you want to have classified as a certain type of data should go into one folder. This is very important if you, in the future want to change the types of thing you want to distinguish. Just move things around, until they are in the separation that you want.
+
+We define classes of data by folders--that is, data that should be classified similarly are put in the same file folder. If you later want to change the types of thing you want to distinguish, you just change the datafilee in the folders.
+
 The file names in our case are not important.
 
 In general the structure should always look like the following:
@@ -34,11 +36,14 @@ AudioData
             └── street_music
 ```
             
-## Working with existing DataSets
-One problematic aspect is, that a lot of data sets are not structured in that way, and come with a .csv file (like a spreadsheet) that associates each file into a class. You will see an example of such a spread sheet when you open the cats-and-dogs audio library.
-For our algorithms to understand the data we need to write small scripts that moves the data into the folder structure mentioned above. 
+## Working with Existing DataSets
+A lot of data sets do not come structured in the way we described above. Instead, the data files come with a .csv spreadsheet file that associates each file into a class. 
 
-Have a look at the section **transforming data-sets** In the Setup Notebook. There we show how the data is being transformed and have scripts ready to do that for both the cats-and-dogs data set and the urban-sounds dataset.
+You will see an example of such a spread sheet when you open the cats-and-dogs audio library.
+
+For our algorithms to understand the data, we need to write small scripts that moves the data into the folder structure mentioned above. 
+
+Have a look at the **transforming data-sets**  notebook. There we provide scripts to sort files into folders; this is used to process the cats-and-dogs data set and the urban-sounds dataset.
 
 ## Squishing time  - taking a snapshot
 
@@ -52,5 +57,4 @@ Whats is hop-length what is fftCount
 
 The values don't matter as much. What is important is consistency among generating and using the system
 We generate data and then we use it to train a normal image net neural nentwork.
-
 
