@@ -8,4 +8,5 @@ In this workshop, we will teach you how to design audio classifiers using neural
 ## Labs
 
 [Lab 0. Setting up](Lab-0.-Setting-up)
+
 [Lab 1. Organizing Data for Learning](Lab-1.-Organizing-Data-for-Learning)
