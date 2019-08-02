@@ -7,6 +7,11 @@ In this workshop, we will teach you how to design audio classifiers using neural
 
 ## Provisional Workshop Schedule
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 ## Labs
 
 [Lab 0. Setting up](Lab-0.-Setting-up)
