@@ -22,4 +22,4 @@ For later exercise we will also use the UrbanSound dataset. You can download it 
 
 [Urban Sounds](https://urbansounddataset.weebly.com/download-urbansound.html)
 
-Other data set can be found on [Kaggle](www.kaggle.com). Kaggle is a data science community site run by Google, which has, among other things, datasets for machine learning.
+Other data set can be found on [Kaggle](https://www.kaggle.com). Kaggle is a data science community site run by Google, which has, among other things, datasets for machine learning.
