@@ -1,26 +1,25 @@
-## Clone the Git Repository
-0. If you don't have a Github account, create a Github account.
-1. [Fork this git repository to your own GitHub.](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/wiki/Forking-a-GitHub-project) ![Fork](images/HowToFork.png) [More help](https://help.github.com/en/articles/fork-a-repo)
-2. Make a folder on your local computer for this workshop, e.g. /Users/LelandJr/NN4A
-2. Clone your forked version of the repository to your local computer workshop directory.
+
+# Getting Set-up
+Before we can get started we need to download a few things. First we need to download the project files we will use for this workshop
+
+You can either download them directly from GitHub to your computer just follow [this link](https://github.com/DavidGoedicke/RealtimeAudioClassification) and click the download button on the right side. If you are familiar with using a command-line/terminal or git you can [clone/(fork-clone)](HowToForkHowToClone.md) the repository directly. 
+
 
 ## Installing software tools and libraries
-Before we can get started, we first have to install a few tools and software libraries.
+Before we can use these project files, we have to install a few tools and software libraries.
 
-1. [Install Jupyter Notebooks](https://jupyter.readthedocs.io/en/latest/install.html).
-2. Start Jupyter notebooks in the folder that you cloned your the forked GitHub repository (i.e. in the folder you just downloaded).
-
-We should add an image here.
-
-3. Within Jupyter, navigate to the folder ./00_Setup/ and open the Notebook inside. 
+1. [Install Jupyter Notebooks](https://jupyter.readthedocs.io/en/latest/install.html). (Some might already have prepared that)
+2. Start Jupyter notebooks in the folder that you cloned to with you downloaded the Git Hub Repository (i.e. in the folder you just downloaded).
+3. Within Jupyter, navigate to the folder `00_Setup` and open the Notebook inside. The notebook is called `Setup.ipynb`. 
 4. Follow the steps inside that notebook to install and test the software libraries we need for this workshop.
 
 ## Download datasets
+For the first lab we will use [our very own Cats-Vs-Dogs](Cats-Vs-Dogs.md) dataset. We will be distributing this dataset in person directly, through [Dropbox](https://www.dropbox.com/sh/pgy6tn4ugbfag0j/AADuiHrW-XgbwCDqiKUrMQ6Na?dl=0), USB-stick or AirDrop. 
 
-We will be using two audio datasets in the first lab: Cats vs. Dogs and UrbanSounds. To download these datasets, you will need to create accounts on [Kaggle](www.kaggle.com), a data science community site run by Google, which has, among other things, datasets for machine learning, and the Urbansounds dataset website.
+When these datasets are finished downloading or copying to the computer, unzip and move them to the ``AudioData/`` folder in your workshop repository folder. Any Dataset you might want to train on later should go in there to make the use of the existing scripts easy. 
 
-[Cats vs. Dogs](http://www.kaggle.com/mmoreaux/audio-cats-and-dogs)
+For later exercise we will also use the UrbanSound dataset. You can download it here:
 
 [Urban Sounds](https://urbansounddataset.weebly.com/download-urbansound.html)
 
-When these datasets are finished downloading, unzip the files and move them to the ``AudioData/`` folder for your workshop repository.
+Other data set can be found on [Kaggle](www.kaggle.com). Kaggle is a data science community site run by Google, which has, among other things, datasets for machine learning.

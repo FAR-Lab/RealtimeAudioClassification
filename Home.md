@@ -7,7 +7,7 @@ In this workshop, we will teach you how to design audio classifiers using neural
 
 ## Provisional Workshop Schedule
 
-| Time | Monday | Tuesdsay | Wednesday | Thursday | Friday |
+| Time | Monday | Tuesday | Wednesday | Thursday | Friday |
 | ------------- | ------------- |------------- |------------- |------------- |------------- |
 | 9am | Introductions  | Review/Q&A | Review/Q&A | Review/Q&A | Review/Q&A |
 | 10-noon | Neural Nets  | Collecting & Analyzing Sounds | Designing Interaction | Generative Models | Project time |
@@ -15,10 +15,10 @@ In this workshop, we will teach you how to design audio classifiers using neural
 |1:30-3:30 | Lab Setup | Stanford Sounds Dataset Activity | Urban Sounds Dataset Lab | Final Project | Project Time/ Show and Tell |
 |3:30-5pm| Cats & Dogs Lab| Stanford Sounds Dataset Activity| Plotting Final Project | Final Project | Happy Hour |
 ## Labs
-
+Q
 [Lab 0. Setting up](Lab-0.-Setting-up)
 
-Lab 1. Cats and Dogs--binary classification
+[Lab 1. Cats and Dogs --binary classification](Lab-1.-Cats-and-Dogs--binary-classification)
 
 Lab 2. Making the Stanford Sounds Dataset
 
