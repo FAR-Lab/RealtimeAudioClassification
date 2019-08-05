@@ -7,5 +7,7 @@ Everything in these notebooks resolves around cells. The current active cell has
 
 When clicking into a cell you can edit the code that is in that cell. To run the code you can click on the button on the top that says ` >| Run` or press `shift + return` at the same time on your keyboard. This will run this cell and select the cell below. This behavior means that if you want to run multiple cells at the same time you can press `shift + return` a few times to quickly run the whole notebook.
 
+If you followed the setup steps to [install the packages](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Lab-0.-Setting-up) and [download the data-set](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Lab-0.-Setting-up#download-datasets) then we can proceed in running the relevant code.
 
-There are two commands you need to remember. The first one is `shift + return`. 
+
+1. Generating Spectrums - as a first step we need to convert the audio-data into image-data.
