@@ -1,11 +1,11 @@
 ## First: Generating Spectrums
 The data you downloaded are normal audio clips collected from [freesound.org](http://freesound.org). The type of neural networks we are using, however, work with images. So the first step is to compute images from the audio data.
 
-We prepared the notebook `GeneratingSpectrums` in the `01_Spectrum Generation` folder for this task.
+We prepared the notebook `GeneratingSpectrums` in the `01_Spectrum Generation` folder for this task. 
 
-The first cell in this notebook, like in all other notebooks, loads in all the libraries that we previously installed. The second cell defines the folder paths to both the source folder where the audio is stored and the folder where the generated images should go.
+The first cell in this notebook, like in all other notebooks, loads in all the libraries that we previously installed; this makes it so that we can access the functions in these libraries instead of having to code these capabilities from scratch. The second cell defines the folder paths to both the source folder where the audio is stored and the folder where the generated images should go.
 
-Now run the first two cells by making sure that the first one is selected (remember the green or blue line on the left side) and press `shift+return` twice. It might take a while but you should see the number in the top left corner, next to the cell change from empty to a star to a number. Something like this 
+Run the first two cells by making sure that the first one is selected (remember the green or blue line on the left side mean *edit* or *command*) and press `shift+return` twice. It might take a while but you should see the number in the top left corner, next to the cell change from empty to a star to a number. Something like this 
 ```python
 In []: # This code block has not been executed.
 
@@ -14,7 +14,7 @@ In [*]: # This code is being executed but has not finished.
 In [1]: #This code block is finished and was the first one to finish. 
 ```
 
-Now, run the 3rd cell from the top. This sell start with '#Loading in the Spectrogram variables'. After starting the cell to run a text box should appear asking you to: "Please type filename without the file ending here". In the textbox type in ``Standard`` and press return. This will load in a file that tells this script how to compute the spectrogram. What the different variables mean, and how to change it is covered in lab two. 
+Now, run the 3rd cell from the top. This cell starts with '#Loading in the Spectrogram variables'. After the cell is run, a text box should appear asking you to "Please type filename without the file ending here". In the textbox, type in ``Standard`` and press return. This will load in a file that tells this script how to compute the spectrogram. (What the different variables mean, and how to change it is covered in Lab 2.) 
 
 ![How to load a Spec file.](images/SpecFileLoad.png)
 
@@ -23,7 +23,11 @@ After that is done, press run (or `shift+return`) another three times. This shou
 ComputeSpectrograms(SOURCE_FOLDER_TRAIN,OUTPUT_FOLDER_TRAIN)
 pickle.dump(SpectrumVariables, open(os.path.join(OUTPUT_FOLDER_TRAIN,'Main.SpecVar'), "wb" ))
 ```
-It will start printing out a bit of information and information about files it has a problem with. For now, we do not have to worry about those messages and we can just wait until the system is finished. To check if it's done, look at the `In [*]:` box in the top left corner of the cell. If it turns into a number, its finished. 
+It will start printing out a bit of overview information and information about files it has a problem with. For now, we do not have to worry about those messages and we can just wait until the system is finished. 
+
+To check if it's done, look at the `In [*]:` box in the top left corner of the cell. If it turns into a number, it is finished. 
+
+At the end of this step, we have made images of all of the sounds in main folder.
 
 ## Training the neural network
 
