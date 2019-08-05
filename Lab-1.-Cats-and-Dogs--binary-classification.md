@@ -1,4 +1,6 @@
 ## First: Generating Spectrums
+Let us look at the files in the audio data set folders we previously downloaded. 
+
 The data you downloaded are normal audio clips collected from [freesound.org](http://freesound.org). The type of neural networks we are using, however, work with images. So the first step is to compute images from the audio data.
 
 We prepared the notebook `GeneratingSpectrums` in the `01_Spectrum Generation` folder for this task. 
@@ -37,7 +39,7 @@ In the textbox, type in ``Standard`` and press return to designate that the `Sta
 
 Press run (or `shift+return`) to run all the other cells on the page.
 
-To check if it's done, look at the `In [*]:` box in the top left corner of the cell. If it turns into a number, it is finished. 
+To check if it's done, look at the `In [*]:` box in the top left corner of the cell. If it turns into a number, it is finished. The last few 
 
 At the end of this step, we have made images of all of the sounds in main folder.
 
