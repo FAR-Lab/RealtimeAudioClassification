@@ -10,4 +10,18 @@ When clicking into a cell you can edit the code that is in that cell. To run the
 If you followed the setup steps to [install the packages](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Lab-0.-Setting-up) and [download the data-set](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Lab-0.-Setting-up#download-datasets) then we can proceed in running the relevant code.
 
 
-1. Generating Spectrums - as a first step we need to convert the audio-data into image-data.
+### First Generating Spectrums
+The data you downloaded are normal audio clips collected from [freesound.org](http://freesound.org). The type of neural networks we are using, however, work with images. So the first step is to compute images from the audio data.
+
+We prepared the notebook `GeneratingSpectrums` in the `01_Spectrum Generation` folder for this task.
+
+The first cell in this notebook, like in all other notebooks, loads in all the libraries that we previously installed. The second cell defines the folder paths to both the source folder where the audio is stored and the folder where the generated images should go.
+
+Now run the first two cells by making sure that the first one is selected (remember the green or blue line on the left side) and press `shift+return` twice. It might take a while but you should see the number in the top left corner, next to the cell change from empty to a star to a number. Something like this 
+```python
+In []: # This code block has not been executed.
+
+In [*]: # This code is being executed but has not finished. 
+
+In [1]: #This code block is finished and was the first one to finish. 
+```
