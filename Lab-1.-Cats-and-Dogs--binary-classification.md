@@ -115,10 +115,13 @@ The '# Network analytics' cell runs the complete test dataset through the algori
 ![ExampleConfusionMatrix](images/confusionmatrix.png)
 
 ## Running the Neural Net
-This is also known as inference. In this step, we basically put the neural net to a real-world test. We let the network infer from the incoming audio which class its thinks is the best fit.
+This is also known as inference. 
+
+In this step, we basically put the neural net to a real-world test. We let the network infer from the incoming audio which class its thinks is the best fit.
+
 This involves creating an audio buffer that we continually update with information from the microphone, then creating an image and running it through the neural net. This happens as fast as possible over and over again.
 
-The underlying Python code is a bit more complex and so Lab 3 will address the details on that. For now, we have a simple Jupyter Notebook calls the more actual script. So, please open the notebook `ResNetInference` in the folder `03_Running`. 
+The underlying Python code is a bit more complex; Lab 3 will address the details on that. For now, we have a simple Jupyter Notebook that just lets us test our network. So, please open the notebook `ResNetInference` in the folder `03_Running`. 
 
 When you run the first two cells you will see that the program will run for 30 seconds and display the most relevant class in the output window.
 
