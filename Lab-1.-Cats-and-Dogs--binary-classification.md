@@ -134,7 +134,7 @@ You can run the second cell over and over again. Better, however, is to change t
 
 ## Explore the data
 
-It helps to get an intuitive feeling for how the sounds get translated to spectrograms. Use `SpectrumsSettingsTool.inpy` from the `00_Setup` folder to explore the mapping between the sound and the image of the spectrograms.
+It helps to get an intuitive feeling for how the sounds get translated to spectrograms. Use `SpectrumsSettingsTool.inpy` from the `01_Spectrum Generation` folder to explore the mapping between the sound and the image of the spectrograms.
 
 
 
