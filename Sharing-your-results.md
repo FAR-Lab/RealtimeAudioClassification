@@ -25,3 +25,5 @@ This will create a file that you or anyone else can use in the `ResNetInference`
 You can upload the .pth files for your model (ideally with ample description) to the `contributed/` brach of the workshop GitHub repository. We will review these and merge them into the master repository!
 
 https://github.com/DavidGoedicke/RealtimeAudioClassification/tree/contributed/models 
+
+![](images/UploadModels.png)
