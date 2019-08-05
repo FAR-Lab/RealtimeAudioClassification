@@ -30,3 +30,9 @@ Now, run the 3rd cell from the top. This sell start with '#Loading in the Spectr
 
 ![How to load a Spec file.](images/SpecFileLoad.png)
 
+After that is done, press run (or `shift+return`) another three times. This should start the 6th cell that has only two lines in it.
+```python
+ComputeSpectrograms(SOURCE_FOLDER_TRAIN,OUTPUT_FOLDER_TRAIN)
+pickle.dump(SpectrumVariables, open(os.path.join(OUTPUT_FOLDER_TRAIN,'Main.SpecVar'), "wb" ))
+```
+It will start printing out a bit of information and information about files it has a problem with. For now, we do not have to worry about those messages and we can just wait until the system is finished. To check if it's done, look at the `In [*]:` box in the top left corner of the cell. If it turns into a number, its finished. 
