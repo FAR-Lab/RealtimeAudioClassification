@@ -19,6 +19,8 @@ import cv2
 import time
 import pickle
 
+from IPython.display import clear_output, display
+
 
 print("ExecutingCode");
 ModelPath="../models/CatDogResNet.pth"
@@ -29,7 +31,6 @@ Input_Resolution = ModelData['resolution']
 
 
 SpectrumVariables = ModelData['SpectrumVariables']
-SAMPLE_RATE=SpectrumVariables["SAMPLE_RATE"]
 N_FFT=SpectrumVariables["N_FFT"]
 HOP_LENGTH= SpectrumVariables["HOP_LENGTH"]
 FMIN=SpectrumVariables["FMIN"]
@@ -53,16 +54,13 @@ model.load_state_dict (ModelData['model'])
 model.cpu()
 model.eval()
 
+SamplingRate =48000
 ringBuffer = RingBuffer(28672*2)
-pa = pyaudio.PyAudio()
+pa = None
 running = True
 
 
-def imshow(img):
-    img = img / 2 + 0.5     # unnormalize
-    npimg = img.numpy()
-    plt.imshow(np.transpose(npimg, (1, 2, 0)))
-    plt.show()
+
 transform = transforms.Compose(
     [transforms.ToPILImage(),
      transforms.ToTensor(),
@@ -99,13 +97,13 @@ def callback(in_data, frame_count, time_info, flag):
 
 
 
-def infere_Class_Type():
+def infere_Class_Type(k):
     if(not ringBuffer.is_full):
         return;
     
     audio_data = np.array(ringBuffer)
-    audio_data = librosa.resample(audio_data, 48000, SAMPLE_RATE)
-    mel_spec_power = librosa.feature.melspectrogram(audio_data, sr=SAMPLE_RATE, n_fft=N_FFT,
+    #audio_data = librosa.resample(audio_data, 48000, SamplingRate)
+    mel_spec_power = librosa.feature.melspectrogram(audio_data, sr=SamplingRate, n_fft=N_FFT,
                                                 hop_length=HOP_LENGTH,
                                                 n_mels=N_MELS, power=POWER,
                                                fmin=FMIN,fmax=FMAX)
@@ -137,40 +135,49 @@ def infere_Class_Type():
     prob, predicted = torch.topk(outputs,len(classes))
     predicted=predicted[0].numpy()
     prob=prob[0].detach().numpy()
+    if(not __name__ == '__main__'):
+        clear_output(wait=True)
     print('---')
     for  j in range(len(predicted)):
+        if(j>=k):
+            break;
         print('Predicted:\t{} \t| Probablilty: \t{:.2f}'.format(classes[predicted[j]],prob[j]))
 
 
 
-def startProgram(targetLength=20):
+def startProgram(targetLength=20,k=2):
     stream.start_stream()
     t0 = time.time()
     while stream.is_active():
         tStart=time.time()
-        infere_Class_Type()
+        infere_Class_Type(k)
         #print("Inference time in ms:\t{:f}".format((time.time()-tStart)*1000) )
         #print("Running time: {:f}".format(time.time()-t0))
         if ( targetLength>0 )and ( (time.time()-t0)>=targetLength):
             break;
 
-stream =None
+stream = None
 
-def RunProgram(targetLength=20):
+def RunProgram(targetLength=20,k=2):
     print("Opening Audio Channel");
+    cv2.startWindowThread()
     global stream
+    global pa
+    pa = pyaudio.PyAudio()
     stream = pa.open(format=pyaudio.paFloat32,
                      channels=1,
-                     rate=48000,
+                     rate=SamplingRate,
                      output=False,
                      input=True,
                      stream_callback=callback)
-    print("Starting Running");
-    startProgram(targetLength)
-    print("Stopping!");
+    print("Starting Running")
+    startProgram(targetLength=targetLength,k=k)
+    print("Stopping!")
     time.sleep(1)
     pa.terminate()
     stream.close()
+    cv2.destroyAllWindows()
+    print("Stopped and Done!")
 
 def imshow(img):
     img = img / 2 + 0.5     # unnormalize
@@ -178,5 +185,5 @@ def imshow(img):
     return(np.transpose(npimg, (1, 2, 0)))
     
 if __name__ == '__main__':
-    RunProgram(0)
+    RunProgram(0,10)
     
