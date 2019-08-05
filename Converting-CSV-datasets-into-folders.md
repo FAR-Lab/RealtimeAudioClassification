@@ -1,7 +1,5 @@
 To enable the use of common scripts for different audio detection projects, we have defined a general framework for organizing data for learning.
 
-To lessen the work of this data organization, we use a lot of Finder(Mac)/Explorer(win) file manipulation techniques.
-
 ### Defining classes
 
 We define classes of data by folders--that is, data that should be classified similarly are put in the same file folder. If you later want to change the types of thing you want to distinguish, you just change the datafilee in the folders.
@@ -39,12 +37,9 @@ AudioData
 ## Working with Existing DataSets
 A lot of data sets do not come structured in the way we described above. Instead, the data files come with a .csv spreadsheet file that associates each file into a class. 
 
-You will see an example of such a spread sheet when you open the cats-and-dogs audio library.
-
 For our algorithms to understand the data, we need to write small scripts that moves the data into the folder structure mentioned above. 
 
-Have a look at the **transforming data-sets**  notebook. There we provide scripts to sort files into folders; this is used to process the cats-and-dogs data set and the urban-sounds dataset.
+Have a look at the **/Transforming Datasets.ipynb** notebook in the `04_ProcessingData` folder. There we provide scripts to sort files into folders; this is used to process datasets like the urban-sounds dataset.
 
 Handy Links
 https://stackoverflow.com/questions/8858008/how-to-move-a-file-in-python how to move a file in python
-
