@@ -3,10 +3,20 @@ The data you downloaded are normal audio clips collected from [freesound.org](ht
 
 We prepared the notebook `GeneratingSpectrums` in the `01_Spectrum Generation` folder for this task. 
 
-````(base) Wendys-MacBook-Pro:RealtimeAudioClassification wendyju$ ls
+````
+(base) XXXX:RealtimeAudioClassification xxx$ ls
 00_Setup		03_Running
 01_Spectrum Generation	README.md
-02_Training		doc````
+02_Training		doc
+(base) XXXX:RealtimeAudioClassification xxxx$ cd 01_Spectrum\ Generation/
+(base) XXXX:01_Spectrum Generation xxxx$ ls
+GeneratingSpectrums.ipynb	test3.SpectrumVariables
+OLD				test4.SpectrumVariables
+SpectrumsAnimation.ipynb	test5.SpectrumVariables
+test.SpectrumVariables		test6.SpectrumVariables
+test2.SpectrumVariables		test7.SpectrumVariables
+(base) XXXX:01_Spectrum Generation xxxx$ jupyter notebook GeneratingSpectrums.ipynb 
+````
 
 The first cell in this notebook, like in all other notebooks, loads in all the libraries that we previously installed; this makes it so that we can access the functions in these libraries instead of having to code these capabilities from scratch. The second cell defines the folder paths to both the source folder where the audio is stored and the folder where the generated images should go.
 
