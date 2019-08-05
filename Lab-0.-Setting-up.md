@@ -14,7 +14,7 @@ Before we start please make sure that git is installed. There is the [GitHub Des
 ## Fork and then Clone 
 0. Before we start, you need a GitHub account, so please go to [github.com/join](https://github.com/join) and create one if you don't have one yet.
 1. Login to your new or existing GitHub account.
-2. Navigate to [this repository](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/wiki/Forking-a-GitHub-project) and fork on the fork button in the top right corner. ![Fork](images/HowToFork.png) [More help](https://help.github.com/en/articles/fork-a-repo) This will create your own copy of the repository under your account. 
+2. Navigate to [this repository](https://github.com/DavidGoedicke/RealtimeAudioClassification/) and fork on the fork button in the top right corner. ![Fork](images/HowToFork.png) [More help](https://help.github.com/en/articles/fork-a-repo) This will create your own copy of the repository under your account. 
 3. Now open your command line or terminal.
 4. Make a folder on your local computer for this workshop. So if you e.g. want to create, a folder called e.g. `NN4A` you would write a function like `mkdir NN4A` and then hit return.
 5 Now enter your new folder by typing `cd NN4A`. Change `NN4A` to whatever you named the folder in the previous command.
