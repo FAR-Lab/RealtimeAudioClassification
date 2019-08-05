@@ -1,13 +1,29 @@
-## First: Generating Spectrums
-Let us look at the files in the audio data set folders we previously downloaded. 
+## The Cats vs. Dogs dataset
+Let us look at the files in the audio data set folders we [previously downloaded](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Lab-0.-Setting-up#download-datasets).
 
-The data you downloaded are normal audio clips collected from [freesound.org](http://freesound.org). The type of neural networks we are using, however, work with images. So the first step is to compute images from the audio data.
+The data you downloaded are normal audio clips collected from [freesound.org](http://freesound.org).
+
+We define classes of data by folders--that is, data that should be classified similarly are put in the same file folder. If you later want to change the types of thing you want to distinguish, you just change the data file in the folders.
+
+For Cats vs. Dogs, the data folders look like this:
+``` shell
+AudioData/
+└── Cats-Vs-Dogs
+    ├── Cats
+    └── Dogs
+````
+
+Take a little time to look at the number of files, and look at some of the files. How many files are there? How big are they? Are they tightly clipped around barks and meows?
+
+## First: Generating Spectrums
+ 
+While we have audio files to analyze, the type of neural networks we are using work with images. So! the first step is to compute images from the audio data.
 
 We prepared the notebook `GeneratingSpectrums` in the `01_Spectrum Generation` folder for this task. 
 
 Here is an example of how to run the notebook from the Mac Terminal command-line:
 
-````
+```` shell
 (base) XXXX:RealtimeAudioClassification xxx$ ls
 00_Setup		03_Running
 01_Spectrum Generation	README.md
