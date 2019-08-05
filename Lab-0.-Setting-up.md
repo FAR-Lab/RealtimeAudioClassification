@@ -1,8 +1,26 @@
 
 # Getting Set-up
-Before we can get started we need to download a few things. First we need to download the project files we will use for this workshop
+Before we can get started we need to download a few things. First, we need to download the project files we will use for this workshop. The following step by step instruction will guide you through making a git account, forking the repository and cloning it to your computer.
+
+## Fork and then Clone 
+0. Before we start, you need a GitHub account, so please go to [github.com/join](https://github.com/join) and create one if you don't have one yet.
+1. Login to your new or existing GitHub account.
+2. Navigate to [this repository](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/wiki/Forking-a-GitHub-project) and fork on the fork button in the top right corner. ![Fork](images/HowToFork.png) [More help](https://help.github.com/en/articles/fork-a-repo) This will create your own copy of the repository under your account. 
+3. Now open your comandline or  
+2. Make a folder on your local computer for this workshop, e.g. /Users/LelandJr/NN4A (See step 2 in the above instructions).
+2. Clone your forked version of the repository to your local computer workshop directory. With the command ``git clone http://github.com/<<<YourGithubUserName>>>/RealtimeAudioClassification.git`` 
+3. If you now navigate into the folder with ``cd RealtimeAudioClassification`` and run ``ls``  you should see the project files like e.g. `00_Setup`, `01_Spectrum Generation`,`02_Training`.
+
+
+
+
+
 
 You can either download them directly from GitHub to your computer just follow [this link](https://github.com/DavidGoedicke/RealtimeAudioClassification) and click the download button on the right side. If you are familiar with using a command-line/terminal or git you can [clone/(fork-clone)](HowToForkHowToClone.md) the repository directly. 
+
+
+
+
 
 ## How to use Jupyter Notebooks
 The main ["IDE"](https://en.wikipedia.org/wiki/Integrated_development_environment) that we will be using this week are Jupyter Notebooks. Jupyter Notebooks is great to try out different code snippets to selectively debug the code you are writing.
