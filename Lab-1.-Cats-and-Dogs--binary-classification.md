@@ -71,19 +71,23 @@ To check if it's done, look at the `In [*]:` box in the top left corner of the c
 
 By the end of this step, we have images made of all of the sounds in main folder.
 
-## Training the neural network
+## Training the Neural Network
 
 Please open the notebook `TrainingResNet` in the folder `02_Training`. (See the previous set for an example of how to run a Jupiter Notebook.)
 
+### Start the Notebook running
 Try to run the whole notebook, either by clicking `Run` a couple of times or by clicking on the menu item `Cell` and selecting `Run All`. The complete execution will probably take a while. It can up to 30 minutes depending on your computers speed number of cores. 
 
+### Look at the code in the Notebook
 While the code is running, we have take some time to go through the notebook and understand what is going on.
 
 Here are a few interesting sections to look at.
 
 
+_Parameters_
 
-Just like in the previous step we define the important parameters for training the network.
+Just like in the previous step, we define the important parameters for training the network at the beginning.
+
 By leaving the variable `SPECTRUM_IMAGES_CLASSES_TEST` empty we create automatically a test and training data set with a 80%/20% ratio split. 
 ```python
 SPECTRUM_IMAGES_CLASSES_TRAIN = '../GeneratedData/Cats-Vs-Dogs/'
@@ -97,31 +101,16 @@ Using one data set and separating them with an 80%/20% split
 ['Cats', 'Dogs']
 ```
 
-The following cell takes an entire training batch of images and displays them with their respecitve labels:
-```python
-#Getting some random training images and showing them
-dataiter = iter(trainloader)
-images, labels = dataiter.next()
-for i in range(trainloader.batch_size):
-    imshow(images[i])
-    print(classes[labels[i]])
-```
-Have a look and verify that indeed you see spectrograph images that look similar to what you saw earlier.
+The `#Getting some random training images and showing them` cell takes an entire training batch of images and displays them with their respective labels. Have a look and verify that indeed you see spectrograph images that look similar to what you saw earlier.
 
 
-The large cell starting with
-```python
-#Training the network on the training dataset
-for i in range(5):  #loop over the dataset multiple (5) times
-```
-is the main cell which will take the longest to compute and actually trains the network. 
+The `#Training the network on the training dataset` cell is the main cell which will take the longest to compute (5-10 minutes) and actually trains the network. 
 
+The following cells then assess the performance of the newly trained neural network.
 
-The last two cells then asses the performance of the newly trained neural network.
+In the '# Print predicted and acual labels for Spectragrams' cell, we load a batch of images and display both the ground truth and the predicted value. This is super valuable to look at as you can sometimes issue especially when the network consistently classifies something wrong.
 
-In the second to last cell, we load a batch of images and display both the ground truth and the predicted value. This is super valuable to look at as you can sometimes issue especially when the network consistently classifies something wrong.
-
-The last cell runs the complete test dataset through the algorithm, produces a confusion matrix and calculates accuracies. When this notebook is done, you should see values like this.
+The '# Network analytics' cell runs the complete test dataset through the algorithm, produces a confusion matrix and calculates accuracies. When this notebook is done, you should see values like this.
 
 ![ExampleConfusionMatrix](images/confusionmatrix.png)
 
