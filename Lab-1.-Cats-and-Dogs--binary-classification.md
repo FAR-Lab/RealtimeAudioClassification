@@ -15,7 +15,7 @@ AudioData/
 
 Take a little time to look at the number of files, and look at some of the files. How many files are there? How big are they? Are they tightly clipped around barks and meows?
 
-## First: Generating Spectrums
+## Generating Spectrums
  
 While we have audio files to analyze, the type of neural networks we are using work with images. So! the first step is to compute images from the audio data.
 
