@@ -3,6 +3,8 @@ The data you downloaded are normal audio clips collected from [freesound.org](ht
 
 We prepared the notebook `GeneratingSpectrums` in the `01_Spectrum Generation` folder for this task. 
 
+Here is an example of how to run the notebook from the Mac Terminal command-line:
+
 ````
 (base) XXXX:RealtimeAudioClassification xxx$ ls
 00_Setup		03_Running
