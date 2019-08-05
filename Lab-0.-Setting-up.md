@@ -1,15 +1,17 @@
-
 # Getting Set-up
 Before we can get started we need to download a few things. First, we need to download the project files we will use for this workshop. The following step by step instruction will guide you through making a git account, forking the repository and cloning it to your computer.
+
+Before we start please make sure that git is installed. There is the [GitHub Dekstop](https://desktop.github.com) version and the regular [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 ## Fork and then Clone 
 0. Before we start, you need a GitHub account, so please go to [github.com/join](https://github.com/join) and create one if you don't have one yet.
 1. Login to your new or existing GitHub account.
 2. Navigate to [this repository](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/wiki/Forking-a-GitHub-project) and fork on the fork button in the top right corner. ![Fork](images/HowToFork.png) [More help](https://help.github.com/en/articles/fork-a-repo) This will create your own copy of the repository under your account. 
-3. Now open your comandline or  
-2. Make a folder on your local computer for this workshop, e.g. /Users/LelandJr/NN4A (See step 2 in the above instructions).
-2. Clone your forked version of the repository to your local computer workshop directory. With the command ``git clone http://github.com/<<<YourGithubUserName>>>/RealtimeAudioClassification.git`` 
-3. If you now navigate into the folder with ``cd RealtimeAudioClassification`` and run ``ls``  you should see the project files like e.g. `00_Setup`, `01_Spectrum Generation`,`02_Training`.
+3. Now open your command line or terminal.
+4. Make a folder on your local computer for this workshop. So if you e.g. want to create, a folder called e.g. `NN4A` you would write a function like `mkdir NN4A` and then hit return.
+5 Now enter your new folder by typing `cd NN4A`. Change `NN4A` to whatever you named the folder in the previous command.
+6. Now clone the forked version of this repository. You can do this with the command ``git clone http://github.com/<<<YourGithubUserName>>>/RealtimeAudioClassification.git`` Remember to replace ``<<<YourGithubUserName>>>`` with your GitHub username. 
+7. If you now navigate into the folder with ``cd RealtimeAudioClassification`` and run ``ls``  you should see the project files like e.g. `00_Setup`, `01_Spectrum Generation`,`02_Training`.
 
 
 
