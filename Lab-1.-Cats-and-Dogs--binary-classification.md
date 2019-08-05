@@ -129,7 +129,13 @@ When you run the first two cells you will see that the program will run for 30 s
 RTA.RunProgram(targetLength=30,k=1)
 ```
 You can run the second cell over and over again. Better, however, is to change the ``targetLength=`` variable to something higher e.g. ``targetLength=60`` for a one minute run(if you enter 0 the program will never stop). If you want to see more the second or third most likely class prediction increase the k value. In our case with Cats-Vs-Dogs, the highest meaningful value is 2, as we only have 2 classes. 
- 
+
+## Explore the data
+
+It helps to get an intuitive feeling for how the sounds get translated to spectrograms. Use `SpectrumsSettingsTool.inpy` from the `00_Setup` folder to explore the mapping between the sound and the image of the spectrograms.
+
+
+
 ## Develop your own Binary classification task
 
 Using online datasets such as [Kaggle](https://www.kaggle.com/tags/audio-data), [AudioSet](https://research.google.com/audioset/), [Freesound](https://datasets.freesound.org/fsd/) and [Mivia](https://mivia.unisa.it/datasets/audio-analysis/mivia-audio-events/), (and others!) find sounds to create your own audio classification task. Target having ~125 samples of each of two categories. 
