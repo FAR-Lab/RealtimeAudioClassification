@@ -16,10 +16,11 @@ GeneratingSpectrums.ipynb	SpectrumsSettingsTool.ipynb
 GeneratingSpectrums_edit.ipynb	Standard.SpecVar
 (base) XXXX:01_Spectrum Generation xxxx$ jupyter notebook GeneratingSpectrums.ipynb 
 ````
+Other ways of launching the GeneratingSpectrums notebook will be demonstrated in lecture.
 
-The first cell in this notebook, like in all other notebooks, loads in all the libraries that we previously installed; this makes it so that we can access the functions in these libraries instead of having to code these capabilities from scratch. The second cell defines the folder paths to both the source folder where the audio is stored and the folder where the generated images should go.
+Run the first two cells,  which load libraries and define folder paths, by making sure that the first one is selected (remember the green or blue line on the left side mean *edit* or *command*) and press `shift+return` twice. 
 
-Run the first two cells by making sure that the first one is selected (remember the green or blue line on the left side mean *edit* or *command*) and press `shift+return` twice. It might take a while but you should see the number in the top left corner, next to the cell change from empty to a star to a number. Something like this 
+It might take a while but you should see the number in the top left corner, next to the cell change from empty to a star to a number. Something like this 
 ```python
 In []: # This code block has not been executed.
 
@@ -28,16 +29,13 @@ In [*]: # This code is being executed but has not finished.
 In [1]: #This code block is finished and was the first one to finish. 
 ```
 
-Now, run the 3rd cell from the top. This cell starts with '#Loading in the Spectrogram variables'. After the cell is run, a text box should appear asking you to "Please type filename without the file ending here". In the textbox, type in ``Standard`` and press return. This will load in a file that tells this script how to compute the spectrogram. (What the different variables mean, and how to change it is covered in Lab 2.) 
+Now, run the 3rd cell,  which loads. the Spectrum Variables file. A text box should appear asking you to "Please type filename without the file ending here". 
+
+In the textbox, type in ``Standard`` and press return to designate that the `Standard.SpecVar` file in the local folder should be used.  (What the different variables mean, and how to change it is covered in Lab 2.) 
 
 ![How to load a Spec file.](images/SpecFileLoad.png)
 
-After that is done, press run (or `shift+return`) another three times. This should start the 6th cell that has only two lines in it.
-```python
-ComputeSpectrograms(SOURCE_FOLDER_TRAIN,OUTPUT_FOLDER_TRAIN)
-pickle.dump(SpectrumVariables, open(os.path.join(OUTPUT_FOLDER_TRAIN,'Main.SpecVar'), "wb" ))
-```
-It will start printing out a bit of overview information and information about files it has a problem with. For now, we do not have to worry about those messages and we can just wait until the system is finished. 
+Press run (or `shift+return`) to run all the other cells on the page.
 
 To check if it's done, look at the `In [*]:` box in the top left corner of the cell. If it turns into a number, it is finished. 
 
