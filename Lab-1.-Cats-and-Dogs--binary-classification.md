@@ -25,3 +25,5 @@ In [*]: # This code is being executed but has not finished.
 
 In [1]: #This code block is finished and was the first one to finish. 
 ```
+
+Now, run the 3rd cell from the top. This sell start with '#Loading in the Spectrogram variables'. After starting the cell to run a text box should appear asking you to: "Please type filename without the file ending here". In the textbox type in ``Standard`` and press return. This will load in a file that tells this script how to compute the spectrogram. What the different variables mean, and how to change it is covered in lab two. 
