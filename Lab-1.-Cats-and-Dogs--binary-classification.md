@@ -12,11 +12,8 @@ Here is an example of how to run the notebook from the Mac Terminal command-line
 02_Training		doc
 (base) XXXX:RealtimeAudioClassification xxxx$ cd 01_Spectrum\ Generation/
 (base) XXXX:01_Spectrum Generation xxxx$ ls
-GeneratingSpectrums.ipynb	test3.SpectrumVariables
-OLD				test4.SpectrumVariables
-SpectrumsAnimation.ipynb	test5.SpectrumVariables
-test.SpectrumVariables		test6.SpectrumVariables
-test2.SpectrumVariables		test7.SpectrumVariables
+GeneratingSpectrums.ipynb	SpectrumsSettingsTool.ipynb
+GeneratingSpectrums_edit.ipynb	Standard.SpecVar
 (base) XXXX:01_Spectrum Generation xxxx$ jupyter notebook GeneratingSpectrums.ipynb 
 ````
 
