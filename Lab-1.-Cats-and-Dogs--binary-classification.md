@@ -52,26 +52,45 @@ SPECTRUM_IMAGES_CLASSES_TRAIN = '../GeneratedData/Cats-Vs-Dogs/'
 SPECTRUM_IMAGES_CLASSES_TEST = ''
 INPUT_RESOLUTION = 224
 ```
-The following section then loads the data from the specified folder and looks for the classes of the data based on the sub-folders. THe script reports the classes it found and if it used an 80%/20% split or not.
+The following section then loads the data from the specified folder and looks for the classes of the data based on the sub-folders. The script reports the classes it found and if it used an 80%/20% split or not.
 
 ```shell
 Using one data set and separating them with an 80%/20% split
 ['Cats', 'Dogs']
 ```
-Two cells down we display one batch of images with their respective labels written below each image.
+
+The following cell takes an entire training batch of images and displays them with their respecitve labels:
+```python
+#Getting some random training images and showing them
+dataiter = iter(trainloader)
+images, labels = dataiter.next()
+for i in range(trainloader.batch_size):
+    imshow(images[i])
+    print(classes[labels[i]])
+```
+Have a look and verify that indeed you see spectrograph images that look similar to what you saw earlier.
 
 
-The next couple of cells deal with loading the model. The most interesting section here is the following:
+The large cell starting with
+```python
+#Training the network on the training dataset
+for i in range(5):  #loop over the dataset multiple (5) times
+```
+is the main cell which will take the longest to compute and actually trains the network. 
 
 
+The last two cells then asses the performance of the newly trained neural network.
 
+In the second to last cell, we load a batch of images and display both the ground truth and the predicted value. This is super valuable to look at as you can sometimes issue especially when the network consistently classifies something wrong.
 
+The last cell runs the complete test dataset through the algorithm, produces a confusion matrix and calculates accuracies. When this notebook is done, you should see values like this.
 
+![ExampleConfusionMatrix](images/confusionmatrix.png)
 
 ## Running the Neural Net
 This is also known as inference. In this step, we basically put the neural net to a real-world test. We let the network infer from the incoming audio which class its thinks is the best fit.
 This involves creating an audio buffer that we continually update with information from the microphone, then creating an image and running it through the neural net. This happens as fast as possible over and over again.
 
-The underlying Python code is a bit more complex and so Lab 3 will address the details on that. For now, we have a simple Jupyter Notebook calls the more actual script. So, please open the notebook `ResNetInference` in the folder `ResNetInference`. 
+The underlying Python code is a bit more complex and so Lab 3 will address the details on that. For now, we have a simple Jupyter Notebook calls the more actual script. So, please open the notebook `ResNetInference` in the folder `03_Running`. 
 
  
