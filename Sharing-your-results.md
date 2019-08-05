@@ -1,8 +1,8 @@
 ## Saving the model
 
-One of the most important aspects of training a neural network is saving the trained model. This part of the script is already implemented and runs each time you run the `TrainingResNet` python notebook. 
+One of the most important aspects of training a neural network is **saving the trained model**. This part of the script is already implemented and runs each time you run the `TrainingResNet` python notebook. 
 
-The following code section, does the job.
+It is the following code section that is performing the task.
 ```python
 SpectrumVariables = pickle.load(open(os.path.join(SPECTRUM_IMAGES_CLASSES_TRAIN,'Main.SpecVar'), "rb" ) )
 torch.save({
@@ -14,9 +14,8 @@ torch.save({
 },"../models/CatDogResNet.pth") # <=Edit file name here 
 ```
 
-If you changed your model by e.g. training on different classes then before, you should change the file name at the very end of this block of python code.
-So, If e.g. the model can now distinguish birds and cats you might want to change this string, the file name to
-```python "../models/CatDogResNet.pth" =>"../models/CatBirdsResNet.pth" ```.
-After changing the name run the cell again. 
+First of all, you can go and visit the models you've built in the `RealtimeAudioClassification/models` folder.
 
-It will create a file that you can use in the `ResNetInference` notebook or for sharing with other people. 
+Also, if you changed your model by e.g. training on different classes then before, you should change the file name at the very end of this block of python code. For example, if you trained the model to now distinguish birds and cats you might want to change the file name to
+```python "../models/CatDogResNet.pth" =>"../models/CatBirdsResNet.pth" ``` before running the cell.
+This will create a file that you can use in the `ResNetInference` notebook or for sharing with other people. 
