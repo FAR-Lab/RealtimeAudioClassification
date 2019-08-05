@@ -9,7 +9,7 @@ This provides a way for workshop members to share links, ask questions or messag
 # Getting Set-up
 Before we can get started we need to download a few things. First, we need to download the project files we will use for this workshop. The following step by step instruction will guide you through making a git account, forking the repository and cloning it to your computer.
 
-Before we start please make sure that git is installed. There is the [GitHub Dekstop](https://desktop.github.com) version and the regular [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+Before we start please make sure that git is installed. There is the [GitHub Desktop](https://desktop.github.com) version and the regular [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
 ## Fork and then Clone 
 0. Before we start, you need a GitHub account, so please go to [github.com/join](https://github.com/join) and create one if you don't have one yet.
