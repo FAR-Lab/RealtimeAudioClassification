@@ -1,4 +1,4 @@
-# Join the workshop Discord group, ccrma_NN4A
+# Join the workshop Discord group, ccrma_nn4a
 
 The invite code for the workshop Discord is: https://discord.gg/Wqz39d
 
