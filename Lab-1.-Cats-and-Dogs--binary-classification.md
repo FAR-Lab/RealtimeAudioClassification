@@ -73,6 +73,8 @@ By the end of this step, we have images made of all of the sounds in main folder
 
 ## Training the Neural Network
 
+We will be using a the [ResNet CNN](https://www.mathworks.com/help/deeplearning/ref/resnet18.html), which was pretrained. on more than a million images from the ImageNet database. Basically, this is a generic CNN that has been trained to "see," and we retrain the last layer of the network to find differences in the Spectrograms.
+
 Please open the notebook `TrainingResNet` in the folder `02_Training`. (See the previous set for an example of how to run a Jupiter Notebook.)
 
 ### Start the Notebook running
