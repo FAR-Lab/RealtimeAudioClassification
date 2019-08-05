@@ -18,7 +18,7 @@ First of all, you can go and visit the models you've built in the `RealtimeAudio
 
 Also, if you changed your model by e.g. training on different classes then before, you should change the file name at the very end of this block of python code. For example, if you trained the model to now distinguish birds and cats you might want to change the file name to
 ```python "../models/CatDogResNet.pth" =>"../models/CatBirdsResNet.pth" ``` before running the cell.
-This will create a file that you can use in the `ResNetInference` notebook or for sharing with other people.
+This will create a file that you or anyone else can use in the `ResNetInference` notebook from the `03_Running` folder.
 
 ## Adding the file to the workshop GitHub repository
 
