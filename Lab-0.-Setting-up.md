@@ -24,6 +24,16 @@ You can either download them directly from GitHub to your computer just follow [
 
 
 
+
+## Installing software tools and libraries
+Before we can use these project files, we have to install a few tools and software libraries.
+
+1. [Install Jupyter Notebooks](https://jupyter.readthedocs.io/en/latest/install.html). (Some might already have prepared that)
+2. Start Jupyter notebooks in the folder that you cloned to with you downloaded the Git Hub Repository (i.e. in the folder you just downloaded).
+3. Within Jupyter, navigate to the folder `00_Setup` and open the Notebook inside. The notebook is called `Setup.ipynb`. 
+4. Follow the steps inside that notebook to install and test the software libraries we need for this workshop.
+
+
 ## How to use Jupyter Notebooks
 The main ["IDE"](https://en.wikipedia.org/wiki/Integrated_development_environment) that we will be using this week are Jupyter Notebooks. Jupyter Notebooks is great to try out different code snippets to selectively debug the code you are writing.
 
@@ -39,21 +49,14 @@ This will run this cell and select the cell below. If you want to run multiple c
 
 If you followed the setup steps to [install the packages](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Lab-0.-Setting-up) and [download the data-set](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Lab-0.-Setting-up#download-datasets), then we can proceed in running the relevant code.
 
-## Installing software tools and libraries
-Before we can use these project files, we have to install a few tools and software libraries.
-
-1. [Install Jupyter Notebooks](https://jupyter.readthedocs.io/en/latest/install.html). (Some might already have prepared that)
-2. Start Jupyter notebooks in the folder that you cloned to with you downloaded the Git Hub Repository (i.e. in the folder you just downloaded).
-3. Within Jupyter, navigate to the folder `00_Setup` and open the Notebook inside. The notebook is called `Setup.ipynb`. 
-4. Follow the steps inside that notebook to install and test the software libraries we need for this workshop.
 
 ## Download datasets
-For the first lab we will use [our very own Cats-Vs-Dogs](Cats-Vs-Dogs) dataset. We will be distributing this dataset in person directly, through [Dropbox](https://www.dropbox.com/sh/pgy6tn4ugbfag0j/AADuiHrW-XgbwCDqiKUrMQ6Na?dl=0), USB-stick or AirDrop. 
+For the first lab, we will use [our very own Cats-Vs-Dogs](Cats-Vs-Dogs) dataset. We will be distributing this dataset in person directly, through [Dropbox](https://www.dropbox.com/sh/pgy6tn4ugbfag0j/AADuiHrW-XgbwCDqiKUrMQ6Na?dl=0), USB-stick or AirDrop. 
 
 When these datasets are finished downloading or copying to the computer, unzip and move them to the ``AudioData/`` folder in your workshop repository folder. Any Dataset you might want to train on later should go in there to make the use of the existing scripts easy. 
 
-For later exercise we will also use the UrbanSound dataset. You can download it here:
+For later exercise, we will also use the UrbanSound dataset. You can download it here:
 
 [Urban Sounds](https://urbansounddataset.weebly.com/download-urbansound.html)
 
-Other data set can be found on [Kaggle](https://www.kaggle.com). Kaggle is a data science community site run by Google, which has, among other things, datasets for machine learning.
+Other data set can be found in [Kaggle](https://www.kaggle.com). Kaggle is a data science community site run by Google, which has, among other things, datasets for machine learning.
