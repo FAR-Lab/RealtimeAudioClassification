@@ -144,6 +144,8 @@ Using online datasets such as [Kaggle](https://www.kaggle.com/tags/audio-data), 
  
 [Converting CSV labelled dataset to folders](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Converting-CSV-datasets-into-folders)
 
+[Sharing/Exporting your model](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Sharing-your-results)
+
 Modify the Cats vs. Dog python notebook inputs to try out your own classification! What works better? What doesn't work as well? Post your learnings on the workshop Discord!
 
 ## Bonus task: Check out the computer vision version of Cats vs. Dogs!
