@@ -18,48 +18,40 @@ from time import sleep
 import cv2
 import time
 import pickle
-
 from IPython.display import clear_output, display
 
 
-print("ExecutingCode");
-ModelPath="../models/CatDogResNet.pth"
-
-ModelData = torch.load(ModelPath,map_location='cpu')
-print(ModelData.keys())
-Input_Resolution = ModelData['resolution']
-
-
-SpectrumVariables = ModelData['SpectrumVariables']
-N_FFT=SpectrumVariables["N_FFT"]
-HOP_LENGTH= SpectrumVariables["HOP_LENGTH"]
-FMIN=SpectrumVariables["FMIN"]
-FMAX=SpectrumVariables["FMAX"]
-N_MELS=SpectrumVariables["N_MELS"]
-POWER=SpectrumVariables["POWER"]
-
-
 model=None
-classes = ModelData['classes']
-foundAModel=False;
-if ModelData['modelType']=="resnet18":
-    model = models.resnet18()
-    model.fc = nn.Linear(512, len(classes))
-    foundAModel=True;
-
-if not foundAModel:
-    print("Could not find requested Model. Please provide a network structure for model:",ModelData['modelType'])
-    exit();
-model.load_state_dict (ModelData['model'])
-model.cpu()
-model.eval()
-
+classes=None
+ringBuffer=None
+Input_Resolution=None
 SamplingRate =48000
+SpectrumVariables=None
 ringBuffer = RingBuffer(28672*2)
 pa = None
-running = True
 
+def LoadModel(ModelPath="../models/CatDogResNet.pth"):
+    global model
+    global SpectrumVariables
+    global classes
+    global Input_Resolution
+    ModelData = torch.load(ModelPath,map_location='cpu')
+    Input_Resolution = ModelData['resolution']
+    SpectrumVariables = ModelData['SpectrumVariables']
+    classes = ModelData['classes']
+    
+    foundAModel=False;
+    if ModelData['modelType']=="resnet18":
+        model = models.resnet18()
+        model.fc = nn.Linear(512, len(classes))
+        foundAModel=True;
 
+    if not foundAModel:
+        print("Could not find requested Model. Please provide a network structure for model:",ModelData['modelType'])
+        exit();
+    model.load_state_dict (ModelData['model'])
+    model.cpu()
+    model.eval()
 
 transform = transforms.Compose(
     [transforms.ToPILImage(),
@@ -80,14 +72,6 @@ def audio_interfaces():
                 interfaces.append(data)
         p.terminate()
         return interfaces
-#print(audio_interfaces())
-
-
-
-
-
-
-
 
 def callback(in_data, frame_count, time_info, flag):
     audio_data = np.frombuffer(in_data, dtype=np.float32)
@@ -95,14 +79,18 @@ def callback(in_data, frame_count, time_info, flag):
     return None, pyaudio.paContinue
 
 
-
-
-def infere_Class_Type(k):
+def infere_Class_Type(NumOutput):
     if(not ringBuffer.is_full):
         return;
     
+    N_FFT=SpectrumVariables["N_FFT"]
+    HOP_LENGTH= SpectrumVariables["HOP_LENGTH"]
+    FMIN=SpectrumVariables["FMIN"]
+    FMAX=SpectrumVariables["FMAX"]
+    N_MELS=SpectrumVariables["N_MELS"]
+    POWER=SpectrumVariables["POWER"]     
+
     audio_data = np.array(ringBuffer)
-    #audio_data = librosa.resample(audio_data, 48000, SamplingRate)
     mel_spec_power = librosa.feature.melspectrogram(audio_data, sr=SamplingRate, n_fft=N_FFT,
                                                 hop_length=HOP_LENGTH,
                                                 n_mels=N_MELS, power=POWER,
@@ -139,26 +127,26 @@ def infere_Class_Type(k):
         clear_output(wait=True)
     print('---')
     for  j in range(len(predicted)):
-        if(j>=k):
+        if(j>=NumOutput):
             break;
         print('Predicted:\t{} \t| Probablilty: \t{:.2f}'.format(classes[predicted[j]],prob[j]))
 
 
 
-def startProgram(targetLength=20,k=2):
+def startProgram(targetLength=20,NumOutput=2):
     stream.start_stream()
     t0 = time.time()
     while stream.is_active():
         tStart=time.time()
-        infere_Class_Type(k)
-        #print("Inference time in ms:\t{:f}".format((time.time()-tStart)*1000) )
-        #print("Running time: {:f}".format(time.time()-t0))
+        infere_Class_Type(NumOutput)
         if ( targetLength>0 )and ( (time.time()-t0)>=targetLength):
             break;
 
 stream = None
 
-def RunProgram(targetLength=20,k=2):
+def RunProgram(targetLength=20,AmmountOfClassesToDisplay=2,ModelPath="../models/CatDogResNet.pth"):
+    print("Loading Model");
+    LoadModel(ModelPath="../models/CatDogResNet.pth")
     print("Opening Audio Channel");
     cv2.startWindowThread()
     global stream
@@ -171,7 +159,7 @@ def RunProgram(targetLength=20,k=2):
                      input=True,
                      stream_callback=callback)
     print("Starting Running")
-    startProgram(targetLength=targetLength,k=k)
+    startProgram(targetLength=targetLength,NumOutput=AmmountOfClassesToDisplay)
     print("Stopping!")
     time.sleep(1)
     pa.terminate()
