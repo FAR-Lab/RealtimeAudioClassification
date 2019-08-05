@@ -141,6 +141,8 @@ It helps to get an intuitive feeling for how the sounds get translated to spectr
 ## Develop your own Binary classification task
 
 Using online datasets such as [Kaggle](https://www.kaggle.com/tags/audio-data), [AudioSet](https://research.google.com/audioset/), [Freesound](https://datasets.freesound.org/fsd/) and [Mivia](https://mivia.unisa.it/datasets/audio-analysis/mivia-audio-events/), (and others!) find sounds to create your own audio classification task. Target having ~125 samples of each of two categories. 
+ 
+[Converting CSV labelled dataset to folders](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Converting-CSV-datasets-into-folders)
 
 Modify the Cats vs. Dog python notebook inputs to try out your own classification! What works better? What doesn't work as well? Post your learnings on the workshop Discord!
 
