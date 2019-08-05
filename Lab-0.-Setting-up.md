@@ -1,3 +1,11 @@
+# Join the workshop Discord group, ccrma_NN4A
+
+The invite code for the workshop Discord is: https://discord.gg/Wqz39d
+
+You can either use the online Discord page (https://discordapp.com/) or download the app.
+
+This provides a way for workshop members to share links, ask questions or message one another.
+
 # Getting Set-up
 Before we can get started we need to download a few things. First, we need to download the project files we will use for this workshop. The following step by step instruction will guide you through making a git account, forking the repository and cloning it to your computer.
 
