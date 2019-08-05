@@ -13,6 +13,7 @@ Before we start please make sure that git is installed. There is the [GitHub Dek
 6. Now clone the forked version of this repository. You can do this with the command ``git clone http://github.com/<<<YourGithubUserName>>>/RealtimeAudioClassification.git`` Remember to replace ``<<<YourGithubUserName>>>`` with your GitHub username. 
 7. If you now navigate into the folder with ``cd RealtimeAudioClassification`` and run ``ls`` (``dir`` on Windows)  you should see the project files like e.g. `00_Setup`, `01_Spectrum Generation`, `02_Training`.
 
+For help with the commands, here is a [cheat sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/).
 
 
 ## Installing software tools and libraries
@@ -33,7 +34,7 @@ Everything in these notebooks resolves around cells. The current active cell has
 
 You can *edit* the code that is in that cell by clicking into the cell. 
 
-To *run* the code in the cell, you can click on the button on the top that says ` >| Run` or press `shift + return` at the same time on your keyboard. 
+To *run* the code in the cell, you can click on the button on the top that says ` >| Run` or press down `shift + return` at the same time on your keyboard. 
 
 This will run this cell and select the cell below. If you want to run multiple cells in succession, you can press `shift + return` a few times to quickly run the whole notebook.
 
@@ -44,4 +45,3 @@ If you followed the setup steps to [install the packages](https://github.com/Dav
 For the first lab, we will use [our very own Cats-Vs-Dogs](Cats-Vs-Dogs) dataset. We will be distributing this dataset in person directly, through [Dropbox](https://www.dropbox.com/sh/pgy6tn4ugbfag0j/AADuiHrW-XgbwCDqiKUrMQ6Na?dl=0), USB-stick or AirDrop. 
 
 When these datasets are finished downloading or copying to the computer, unzip and move them to the ``AudioData/`` folder in your workshop repository folder. Any Dataset you might want to train on later should go in there to make the use of the existing scripts easy. 
-
