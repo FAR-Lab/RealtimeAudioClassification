@@ -101,12 +101,12 @@ Using one data set and separating them with an 80%/20% split
 ['Cats', 'Dogs']
 ```
 
-The `#Getting some random training images and showing them` cell takes an entire training batch of images and displays them with their respective labels. Have a look and verify that indeed you see spectrograph images that look similar to what you saw earlier.
+The _Preview sample training images_ cells takes an entire training batch of images and displays them with their respective labels. Have a look and verify that indeed you see spectrograph images that look similar to what you saw earlier.
 
 
-The `#Training the network on the training dataset` cell is the main cell which will take the longest to compute (5-10 minutes) and actually trains the network. 
+The _Training the network_ cell is the main cell which will take the longest to compute (5-10 minutes) and actually trains the network. 
 
-The following cells then assess the performance of the newly trained neural network.
+The _Post training analytics_ cells then assess the performance of the newly trained neural network.
 
 In the '# Print predicted and acual labels for Spectragrams' cell, we load a batch of images and display both the ground truth and the predicted value. This is super valuable to look at as you can sometimes issue especially when the network consistently classifies something wrong.
 
