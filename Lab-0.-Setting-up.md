@@ -48,7 +48,7 @@ Before we can use these project files, we have to install a few tools and softwa
 4. Follow the steps inside that notebook to install and test the software libraries we need for this workshop.
 
 ## Download datasets
-For the first lab we will use [our very own Cats-Vs-Dogs](Cats-Vs-Dogs.md) dataset. We will be distributing this dataset in person directly, through [Dropbox](https://www.dropbox.com/sh/pgy6tn4ugbfag0j/AADuiHrW-XgbwCDqiKUrMQ6Na?dl=0), USB-stick or AirDrop. 
+For the first lab we will use [our very own Cats-Vs-Dogs](Cats-Vs-Dogs) dataset. We will be distributing this dataset in person directly, through [Dropbox](https://www.dropbox.com/sh/pgy6tn4ugbfag0j/AADuiHrW-XgbwCDqiKUrMQ6Na?dl=0), USB-stick or AirDrop. 
 
 When these datasets are finished downloading or copying to the computer, unzip and move them to the ``AudioData/`` folder in your workshop repository folder. Any Dataset you might want to train on later should go in there to make the use of the existing scripts easy. 
 
