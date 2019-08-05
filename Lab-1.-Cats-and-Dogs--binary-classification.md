@@ -135,3 +135,7 @@ You can run the second cell over and over again. Better, however, is to change t
 Using online datasets such as [Kaggle](https://www.kaggle.com/tags/audio-data), [AudioSet](https://research.google.com/audioset/), [Freesound](https://datasets.freesound.org/fsd/) and [Mivia](https://mivia.unisa.it/datasets/audio-analysis/mivia-audio-events/), (and others!) find sounds to create your own audio classification task. Target having ~125 samples of each of two categories. 
 
 Modify the Cats vs. Dog python notebook inputs to try out your own classification! What works better? What doesn't work as well? Post your learnings on the workshop Discord!
+
+## Bonus task: Check out the computer vision version of Cats vs. Dogs!
+
+This is the canonical tutorial of the basic binary classification tasks: https://towardsdatascience.com/image-classifier-cats-vs-dogs-with-convolutional-neural-networks-cnns-and-google-colabs-4e9af21ae7a8
