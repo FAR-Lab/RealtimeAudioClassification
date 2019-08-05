@@ -45,8 +45,3 @@ For the first lab, we will use [our very own Cats-Vs-Dogs](Cats-Vs-Dogs) dataset
 
 When these datasets are finished downloading or copying to the computer, unzip and move them to the ``AudioData/`` folder in your workshop repository folder. Any Dataset you might want to train on later should go in there to make the use of the existing scripts easy. 
 
-For later exercise, we will also use the UrbanSound dataset. You can download it here:
-
-[Urban Sounds](https://urbansounddataset.weebly.com/download-urbansound.html)
-
-Other data set can be found in [Kaggle](https://www.kaggle.com). Kaggle is a data science community site run by Google, which has, among other things, datasets for machine learning.
