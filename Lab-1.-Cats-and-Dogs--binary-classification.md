@@ -93,4 +93,10 @@ This involves creating an audio buffer that we continually update with informati
 
 The underlying Python code is a bit more complex and so Lab 3 will address the details on that. For now, we have a simple Jupyter Notebook calls the more actual script. So, please open the notebook `ResNetInference` in the folder `03_Running`. 
 
+When you run the first two cells you will see that the program will run for 30 seconds and display the most relevant class in the output window.
+
+```python
+RTA.RunProgram(targetLength=30,k=1)
+```
+You can run the second cell over and over again. Better, however, is to change the ``targetLength=`` variable to something higher e.g. ``targetLength=60`` for a one minute run(if you enter 0 the program will never stop). If you want to see more the second or third most likley class prediction increase the k value. In our case with Cats-Vs-Dogs the highest meanginful value is 2 as we only have 2 classes. 
  
