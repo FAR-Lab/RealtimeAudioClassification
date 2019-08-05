@@ -39,7 +39,43 @@ It will start printing out a bit of information and information about files it h
 
 ## Training the neural network
 
-After the previous step has finished computing the images, we are ready to proceed to the next step. For that, please open the notebook `TrainingResNet` in the folder `02_Training`. Let us just try to run the whole notebook, either by clicking `Run` a couple of times or by clicking on the menu item `Cell` and selecting `Run All`. 
+After the previous step has finished computing the images, we are ready to proceed to the next step. For that, please open the notebook `TrainingResNet` in the folder `02_Training`. Let us just try to run the whole notebook, either by clicking `Run` a couple of times or by clicking on the menu item `Cell` and selecting `Run All`. The complete execution will probably take a while. It can up to 30 minutes depending on your computers speed number of cores. It is a perfect time, however, to go through the notebook and trying to understand what is going on.
 
+Here are a few interesting sections to look at.
+
+
+
+Just like in the previous step we define the important parameters for training the network.
+By leaving the variable `SPECTRUM_IMAGES_CLASSES_TEST` empty we create automatically a test and training data set with a 80%/20% ratio split. 
+```python
+SPECTRUM_IMAGES_CLASSES_TRAIN = '../GeneratedData/Cats-Vs-Dogs/'
+SPECTRUM_IMAGES_CLASSES_TEST = ''
+INPUT_RESOLUTION = 224
+```
+The following section then loads the data from the specified folder and looks for the classes of the data based on the sub-folders. THe script reports the classes it found and if it used an 80%/20% split or not.
+
+```shell
+Using one data set and separating them with an 80%/20% split
+['Cats', 'Dogs']
+```
+Two cells down we display one batch of images with their respective labels written below each image.
+
+
+The next couple of cells deal with loading the model. The most interesting section here is the following:
+```python 
+for param in model.parameters():
+    param.requires_grad = False
+model.fc = nn.Linear(512, len(classes))
+```
+In these three lines of code, we basically replace the last layer of our network with one that fits our problem. In this ``len(classes)`` gives us the number of classes we loaded in with our data set. In this example, it would be two (``classes =['Cats', 'Dogs']``).
+The other two lines before hand basically tell the network, not to change thos values when it tries to tweak the parameters. 
+
+
+## Running the Neural Net
+
+This is also known as inference. In this step, we basically put the neural net to a real-world test. We let the network infer from the incoming audio which class its thinks is the best fit.
+This involves creating an audio buffer that we continually update with information from the microphone, then creating an image and running it through the neural net. This happens as fast as possible over and over again.
+
+The underlying Python code is a bit more complex and so Lab 3 will address the details on that. For now, we have a simple Jupyter Notebook calls the more actual script. So, please open the notebook `ResNetInference` in the folder `ResNetInference`. 
 
  
