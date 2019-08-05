@@ -62,17 +62,13 @@ Two cells down we display one batch of images with their respective labels writt
 
 
 The next couple of cells deal with loading the model. The most interesting section here is the following:
-```python 
-for param in model.parameters():
-    param.requires_grad = False
-model.fc = nn.Linear(512, len(classes))
-```
-In these three lines of code, we basically replace the last layer of our network with one that fits our problem. In this ``len(classes)`` gives us the number of classes we loaded in with our data set. In this example, it would be two (``classes =['Cats', 'Dogs']``).
-The other two lines before hand basically tell the network, not to change thos values when it tries to tweak the parameters. 
+
+
+
+
 
 
 ## Running the Neural Net
-
 This is also known as inference. In this step, we basically put the neural net to a real-world test. We let the network infer from the incoming audio which class its thinks is the best fit.
 This involves creating an audio buffer that we continually update with information from the microphone, then creating an image and running it through the neural net. This happens as fast as possible over and over again.
 
