@@ -16,8 +16,11 @@ AudioData/
 Take a little time to look at the number of files, and look at some of the files. How many files are there? How big are they? Are they tightly clipped around barks and meows?
 
 ## Generating Spectrums
- 
-While we have audio files to analyze, the type of neural networks we are using work with images. So! the first step is to compute images from the audio data.
+One of the field neural networks in their current form are very good at are detecting images. The convolutional Neural Networks (CNNs) that are being used for image recognition have become almost ubiquitous and are therefore very easy to play with. 
+
+Ironically, then, one of the best ways to perform classification of audio data convert our audio into spectrograms, which is essentially an image representation of a little audio snippet. After we generate these audio-images, we can retrain any standard image classifier to work with our images and help us classify our audio data. 
+
+So! the first step is to compute images from the audio data.
 
 We prepared the notebook `GeneratingSpectrums` in the `01_Spectrum Generation` folder for this task. 
 
