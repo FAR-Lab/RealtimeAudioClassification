@@ -39,5 +39,7 @@ It will start printing out a bit of information and information about files it h
 
 ## Training the neural network
 
-After the previous step has finished computing the images, we are ready to proceed to the next step. For that, please open the notebook `TrainingResNet` in the folder `02_Training`. Let us just try to run the whole note book, ethier by clicking run a couple of times, or by clicking on the menu item `Cell` and selecting `Run All`
-For this part please open the notebook 
+After the previous step has finished computing the images, we are ready to proceed to the next step. For that, please open the notebook `TrainingResNet` in the folder `02_Training`. Let us just try to run the whole notebook, either by clicking `Run` a couple of times or by clicking on the menu item `Cell` and selecting `Run All`. 
+
+
+ 
