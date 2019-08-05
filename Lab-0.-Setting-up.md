@@ -11,17 +11,7 @@ Before we start please make sure that git is installed. There is the [GitHub Dek
 4. Make a folder on your local computer for this workshop. So if you e.g. want to create, a folder called e.g. `NN4A` you would write a function like `mkdir NN4A` and then hit return.
 5 Now enter your new folder by typing `cd NN4A`. Change `NN4A` to whatever you named the folder in the previous command.
 6. Now clone the forked version of this repository. You can do this with the command ``git clone http://github.com/<<<YourGithubUserName>>>/RealtimeAudioClassification.git`` Remember to replace ``<<<YourGithubUserName>>>`` with your GitHub username. 
-7. If you now navigate into the folder with ``cd RealtimeAudioClassification`` and run ``ls``  you should see the project files like e.g. `00_Setup`, `01_Spectrum Generation`,`02_Training`.
-
-
-
-
-
-
-You can either download them directly from GitHub to your computer just follow [this link](https://github.com/DavidGoedicke/RealtimeAudioClassification) and click the download button on the right side. If you are familiar with using a command-line/terminal or git you can [clone/(fork-clone)](HowToForkHowToClone.md) the repository directly. 
-
-
-
+7. If you now navigate into the folder with ``cd RealtimeAudioClassification`` and run ``ls``  you should see the project files like e.g. `00_Setup`, `01_Spectrum Generation`, `02_Training`.
 
 
 
