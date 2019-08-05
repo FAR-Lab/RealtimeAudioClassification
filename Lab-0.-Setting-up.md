@@ -4,6 +4,20 @@ Before we can get started we need to download a few things. First we need to dow
 
 You can either download them directly from GitHub to your computer just follow [this link](https://github.com/DavidGoedicke/RealtimeAudioClassification) and click the download button on the right side. If you are familiar with using a command-line/terminal or git you can [clone/(fork-clone)](HowToForkHowToClone.md) the repository directly. 
 
+## How to use Jupyter Notebooks
+The main ["IDE"](https://en.wikipedia.org/wiki/Integrated_development_environment) that we will be using this week are Jupyter Notebooks. Jupyter Notebooks is great to try out different code snippets to selectively debug the code you are writing.
+
+Everything in these notebooks resolves around cells. The current active cell has a blue or green stripe on the left side. ([Why green or blue? Look here!](https://medium.com/ibm-data-science-experience/back-to-basics-jupyter-notebooks-dfcdc19c54bc)) Normally a cell contains a section of code that is executed together, e.g. We often define each function in its own cell.
+
+![Example Image of how a cell looks like.](images/ExampleCell.png)
+
+You can *edit* the code that is in that cell by clicking into the cell. 
+
+To *run* the code in the cell, you can click on the button on the top that says ` >| Run` or press `shift + return` at the same time on your keyboard. 
+
+This will run this cell and select the cell below. If you want to run multiple cells in succession, you can press `shift + return` a few times to quickly run the whole notebook.
+
+If you followed the setup steps to [install the packages](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Lab-0.-Setting-up) and [download the data-set](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Lab-0.-Setting-up#download-datasets), then we can proceed in running the relevant code.
 
 ## Installing software tools and libraries
 Before we can use these project files, we have to install a few tools and software libraries.
