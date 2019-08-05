@@ -24,15 +24,15 @@ We prepared the notebook `GeneratingSpectrums` in the `01_Spectrum Generation` f
 Here is an example of how to run the notebook from the Mac Terminal command-line:
 
 ```` shell
-(base) XXXX:RealtimeAudioClassification xxx$ ls
+$ ls
 00_Setup		03_Running
 01_Spectrum Generation	README.md
 02_Training		doc
-(base) XXXX:RealtimeAudioClassification xxxx$ cd 01_Spectrum\ Generation/
-(base) XXXX:01_Spectrum Generation xxxx$ ls
+$ cd 01_Spectrum\ Generation/
+$ ls
 GeneratingSpectrums.ipynb	SpectrumsSettingsTool.ipynb
 GeneratingSpectrums_edit.ipynb	Standard.SpecVar
-(base) XXXX:01_Spectrum Generation xxxx$ jupyter notebook GeneratingSpectrums.ipynb 
+$ jupyter notebook GeneratingSpectrums.ipynb 
 ````
 Other ways of launching the GeneratingSpectrums notebook will be demonstrated in lecture.
 
@@ -47,7 +47,7 @@ In [*]: # This code is being executed but has not finished.
 In [1]: #This code block is finished and was the first one to finish. 
 ```
 
-Now, run the 3rd cell,  which loads. the Spectrum Variables file. A text box should appear asking you to "Please type filename without the file ending here". 
+Now, run the 3rd cell,  which loads the Spectrum Variables file. A text box should appear asking you to "Please type filename without the file ending here". 
 
 In the textbox, type in ``Standard`` and press return to designate that the `Standard.SpecVar` file in the local folder should be used.  (What the different variables mean, and how to change it is covered in Lab 2.) 
 
@@ -55,13 +55,17 @@ In the textbox, type in ``Standard`` and press return to designate that the `Sta
 
 Press run (or `shift+return`) to run all the other cells on the page.
 
-To check if it's done, look at the `In [*]:` box in the top left corner of the cell. If it turns into a number, it is finished. The last few 
+To check if it's done, look at the `In [*]:` box in the top left corner of the cell. If it turns into a number, it is finished. The last step will take several minutes, and may generate warning messages even if everything is working.
 
-At the end of this step, we have made images of all of the sounds in main folder.
+By the end of this step, we have images made of all of the sounds in main folder.
 
 ## Training the neural network
 
-After the previous step has finished computing the images, we are ready to proceed to the next step. For that, please open the notebook `TrainingResNet` in the folder `02_Training`. Let us just try to run the whole notebook, either by clicking `Run` a couple of times or by clicking on the menu item `Cell` and selecting `Run All`. The complete execution will probably take a while. It can up to 30 minutes depending on your computers speed number of cores. It is a perfect time, however, to go through the notebook and trying to understand what is going on.
+Please open the notebook `TrainingResNet` in the folder `02_Training`. (See the previous set for an example of how to run a Jupiter Notebook.)
+
+Try to run the whole notebook, either by clicking `Run` a couple of times or by clicking on the menu item `Cell` and selecting `Run All`. The complete execution will probably take a while. It can up to 30 minutes depending on your computers speed number of cores. 
+
+While the code is running, we have take some time to go through the notebook and understand what is going on.
 
 Here are a few interesting sections to look at.
 
