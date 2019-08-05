@@ -10,7 +10,7 @@ When clicking into a cell you can edit the code that is in that cell. To run the
 
 If you followed the setup steps to [install the packages](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Lab-0.-Setting-up) and [download the data-set](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Lab-0.-Setting-up#download-datasets) then we can proceed in running the relevant code.
 
-### First Generating Spectrums
+### First: Generating Spectrums
 The data you downloaded are normal audio clips collected from [freesound.org](http://freesound.org). The type of neural networks we are using, however, work with images. So the first step is to compute images from the audio data.
 
 We prepared the notebook `GeneratingSpectrums` in the `01_Spectrum Generation` folder for this task.
