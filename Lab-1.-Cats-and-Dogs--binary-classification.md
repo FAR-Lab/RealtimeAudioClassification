@@ -1,8 +1,17 @@
 ## The Cats vs. Dogs dataset
 Let us look at the files in the audio data set folders we [previously downloaded](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Lab-0.-Setting-up#download-datasets).
 
-The data you downloaded are normal audio clips collected from [freesound.org](http://freesound.org).
+### The Data
+The Cats-Vs-Dogs dataset is a simple audio at a set that has two classes, sounds of cats meowing and of dogs barking. The data was created to have an easy binary example of how classification can work. The data set is a bout 1.5Gb large and has samples of varying length. The samples are all wav files with at least 16bit and at least 44.1 kHz sampling rate. Most will have a sampling rate of 48 kHz and a bit depth off 24bit.
 
+
+While the bit depth is not as important (noise is a good thing for neural nets) the sampling rate is very important. The higher the [niquist frequency](wikipedia.org) the more information can be displayed in the Spectrogram.
+
+### Collection
+
+This data set was collected from [freesound.org](freesound.org). Most of the sounds are under public license and have been recorded on very different audio gear, in different contexts etc. 
+
+### Data Structure
 We define classes of data by folders--that is, data that should be classified similarly are put in the same file folder. If you later want to change the types of thing you want to distinguish, you just change the data file in the folders.
 
 For Cats vs. Dogs, the data folders look like this:
