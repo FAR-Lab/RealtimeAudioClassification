@@ -18,7 +18,7 @@ We have 32 GB microSD cards and AA batteries on hand; think about how to set up 
 
 ## Quality
 
-It is always possible to degrade a sound file after it is captured, so we will attempt high quality field recordings: 44.1 kHz sampling rate, no compression, ideally 10 seconds in length, mono or stereo.
+It is always possible to degrade a sound file after it is captured, so we will attempt high quality field recordings: 96kHz/16bit sampling rate, no compression, ideally 10 seconds in length, mono or stereo.
 
 ## Labelling
 
