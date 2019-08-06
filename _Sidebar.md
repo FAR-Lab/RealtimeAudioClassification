@@ -4,4 +4,4 @@
 
 [Lab 2. Making Datasets](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Lab-2.-Making-the-Stanford-Sounds-Dataset)
 
-[Cheatsheets for Python, Jupyter, etc.](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Cheat-sheets-for-Python,-Jupiter,-etc.)
+[Cheatsheets for Python, Jupyter, etc.](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Cheat-sheets-for-Python,-Jupyter,-etc.)
