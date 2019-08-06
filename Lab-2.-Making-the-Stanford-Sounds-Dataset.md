@@ -22,6 +22,11 @@ It is always possible to degrade a sound file after it is captured, so we will a
 
 ## Labelling
 
+1. Synchronize the time and date on the recorder so that it matches the time and date of your phone. 
+2. We recommend taking a quick reminder photo at each site that audio is recorded. This will help you to remember what the audio clips are of, and will provide a geotag.
+3. Make sure geotagging is turned on!
+
+
 Sounds uploaded to the [freesound](http://freesound.org) site have the following labelling options, which we feel is worth following as a guide:
 
 * a name
@@ -29,6 +34,13 @@ Sounds uploaded to the [freesound](http://freesound.org) site have the following
 * description
 * geotag
 
+
 ## Test run
 
 An important thing to do before setting out is to record some clips around CCRMA, come back, upload the data, and check the sound quality. This helps to make sure that you do not come back from your treks empty-handed, and gives everyone some practice with the overall data capture workflow.
+
+Download the snapshots from the phone and the audio files. The synchronized timestamps for date created should help you match the image to the sound file.
+
+## Go Forth
+
+Go collect data!
