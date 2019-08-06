@@ -1,0 +1,359 @@
+[I 01:59:00.608 NotebookApp] [nb_conda_kernels] enabled, 2 kernels found
+[I 01:59:00.787 NotebookApp] [nb_conda] enabled
+[I 01:59:00.787 NotebookApp] Serving notebooks from local directory: /media/localDrive/GitRepos
+[I 01:59:00.787 NotebookApp] The Jupyter Notebook is running at:
+[I 01:59:00.787 NotebookApp] http://localhost:8889/
+[I 01:59:00.787 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 01:59:14.191 NotebookApp] 404 DELETE /api/sessions/824f45d0-82f4-454d-9a5e-9f23b9fd8e91 (127.0.0.1): Session not found: session_id='824f45d0-82f4-454d-9a5e-9f23b9fd8e91'
+[W 01:59:14.192 NotebookApp] Session not found: session_id='824f45d0-82f4-454d-9a5e-9f23b9fd8e91'
+[W 01:59:14.192 NotebookApp] 404 DELETE /api/sessions/824f45d0-82f4-454d-9a5e-9f23b9fd8e91 (127.0.0.1) 5.78ms referer=http://localhost:7888/notebooks/UrbanSoundTraining.ipynb
+[I 01:59:14.251 NotebookApp] Kernel started: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 01:59:14.558 NotebookApp] Adapting to protocol v5.1 for kernel 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 01:59:34.291 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 02:00:21.781 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 02:00:55.766 NotebookApp] Kernel interrupted: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 02:01:27.855 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 02:01:55.988 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 02:02:21.792 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 02:03:49.509 NotebookApp] Kernel interrupted: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 02:04:21.803 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 02:05:10.967 NotebookApp] Kernel interrupted: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 02:06:21.780 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 02:06:27.428 NotebookApp] Starting buffering for 0357ee93-3e6a-493e-850d-72a33ecc14bb:e8e9b9a58828453885abdf9ce59df5a8
+[I 11:01:25.967 NotebookApp] 302 GET /tree/pytorchTests (127.0.0.1) 1.36ms
+[W 11:01:25.973 NotebookApp] Forbidden
+[W 11:01:25.974 NotebookApp] 403 GET /api/config/common?_=1551499424255 (127.0.0.1) 1.39ms referer=http://localhost:8888/tree/pytorchTests
+[W 11:01:25.975 NotebookApp] Forbidden
+[W 11:01:25.976 NotebookApp] 403 GET /api/kernelspecs (127.0.0.1) 1.26ms referer=http://localhost:8888/tree/pytorchTests
+[W 11:01:25.977 NotebookApp] Forbidden
+[W 11:01:25.977 NotebookApp] 403 GET /api/terminals?_=1551499424258 (127.0.0.1) 0.85ms referer=http://localhost:8888/tree/pytorchTests
+[W 11:01:25.979 NotebookApp] Forbidden
+[W 11:01:25.979 NotebookApp] 403 GET /api/contents/pytorchTests?type=directory&_=1551499424259 (127.0.0.1) 0.93ms referer=http://localhost:8888/tree/pytorchTests
+[I 11:01:33.002 NotebookApp] 302 POST /login?next=%2Ftree%2FpytorchTests (127.0.0.1) 2.24ms
+[W 11:01:33.073 NotebookApp] 404 GET /tree/pytorchTests (127.0.0.1) 14.36ms referer=http://localhost:8888/login?next=%2Ftree%2FpytorchTests
+[I 11:01:43.300 NotebookApp] Adapting to protocol v5.1 for kernel 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 11:01:43.302 NotebookApp] Discarding 891 buffered messages for 0357ee93-3e6a-493e-850d-72a33ecc14bb:e8e9b9a58828453885abdf9ce59df5a8
+[W 11:01:43.341 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190302015900 (127.0.0.1) 2.49ms referer=http://localhost:8888/notebooks/UrbanSoundTraining.ipynb
+[I 11:03:43.306 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 11:05:43.284 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 11:10:51.201 NotebookApp] 302 GET / (127.0.0.1) 0.79ms
+[I 11:51:40.512 NotebookApp] Starting buffering for 0357ee93-3e6a-493e-850d-72a33ecc14bb:0d883bc1e1ef43148db99383cceb21c4
+[I 13:21:12.985 NotebookApp] Adapting to protocol v5.1 for kernel 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[W 13:21:12.994 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190302015900 (127.0.0.1) 2.70ms referer=http://localhost:8888/notebooks/UrbanSoundTraining.ipynb
+[I 13:25:13.015 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:25:39.833 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:26:25.055 NotebookApp] Kernel interrupted: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 13:27:13.009 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:29:13.006 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:31:13.010 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:33:13.014 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:34:32.102 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:35:13.018 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:35:31.513 NotebookApp] Kernel interrupted: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 13:36:04.510 NotebookApp] Kernel interrupted: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 13:37:13.021 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:39:13.015 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:40:40.498 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:40:51.005 NotebookApp] Kernel interrupted: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 13:41:13.017 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:43:13.025 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:48:29.173 NotebookApp] Starting buffering for 0357ee93-3e6a-493e-850d-72a33ecc14bb:62e352b9f6e34d548cffe37273e3284a
+[I 13:48:29.786 NotebookApp] Kernel restarted: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 13:48:30.100 NotebookApp] Adapting to protocol v5.1 for kernel 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 13:48:30.101 NotebookApp] Restoring connection for 0357ee93-3e6a-493e-850d-72a33ecc14bb:62e352b9f6e34d548cffe37273e3284a
+[I 13:48:30.101 NotebookApp] Replaying 3 buffered messages
+[I 13:49:17.895 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:49:23.640 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:50:11.332 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:50:30.251 NotebookApp] Starting buffering for 0357ee93-3e6a-493e-850d-72a33ecc14bb:62e352b9f6e34d548cffe37273e3284a
+[I 13:50:30.461 NotebookApp] Kernel restarted: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 13:50:30.804 NotebookApp] Adapting to protocol v5.1 for kernel 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 13:50:30.806 NotebookApp] Restoring connection for 0357ee93-3e6a-493e-850d-72a33ecc14bb:62e352b9f6e34d548cffe37273e3284a
+[I 13:50:30.806 NotebookApp] Replaying 3 buffered messages
+[I 13:51:18.653 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:51:31.300 NotebookApp] Kernel interrupted: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 13:52:46.001 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:53:18.690 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:55:18.695 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:56:17.693 NotebookApp] Kernel interrupted: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 13:57:18.676 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 13:58:39.010 NotebookApp] Kernel interrupted: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 13:59:18.672 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 14:00:03.143 NotebookApp] Kernel interrupted: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 14:01:18.685 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 14:03:18.689 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 14:03:46.155 NotebookApp] 302 GET /notebooks/UrbanSoundTraining.ipynb (127.0.0.1) 1.09ms
+[I 14:05:18.680 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 14:07:22.928 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 14:09:41.195 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 14:11:46.566 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 14:13:46.515 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 14:16:17.720 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 14:18:17.702 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 14:20:17.760 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 14:22:17.929 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 14:24:51.807 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 14:28:47.725 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 14:35:18.897 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 14:39:00.919 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[W 14:43:30.807 NotebookApp] WebSocket ping timeout after 119997 ms.
+[E 14:43:31.367 NotebookApp] Uncaught exception in ZMQStream callback
+    Traceback (most recent call last):
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+        callback(*args, **kwargs)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/websocket.py", line 259, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 14:43:31.370 NotebookApp] Uncaught exception in zmqstream callback
+    Traceback (most recent call last):
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 450, in _handle_events
+        self._handle_recv()
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 480, in _handle_recv
+        self._run_callback(callback, msg)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+        callback(*args, **kwargs)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/websocket.py", line 259, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+ERROR:asyncio:Exception in callback BaseAsyncIOLoop._handle_events(22, 1)
+handle: <Handle BaseAsyncIOLoop._handle_events(22, 1)>
+Traceback (most recent call last):
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/platform/asyncio.py", line 122, in _handle_events
+    handler_func(fileobj, events)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 450, in _handle_events
+    self._handle_recv()
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 480, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+    self.on_recv(lambda msg: callback(self, msg), copy=copy)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+    super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+    self.write_message(msg, binary=isinstance(msg, bytes))
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/websocket.py", line 259, in write_message
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[I 14:43:35.811 NotebookApp] Starting buffering for 0357ee93-3e6a-493e-850d-72a33ecc14bb:62e352b9f6e34d548cffe37273e3284a
+[I 19:57:24.989 NotebookApp] Adapting to protocol v5.1 for kernel 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 19:57:24.992 NotebookApp] Restoring connection for 0357ee93-3e6a-493e-850d-72a33ecc14bb:62e352b9f6e34d548cffe37273e3284a
+[I 19:57:24.992 NotebookApp] Replaying 590 buffered messages
+[I 19:58:21.037 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 20:00:21.022 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[W 20:56:33.701 NotebookApp] Notebook GenerateSpectrumUrban.ipynb is not trusted
+[I 20:56:33.950 NotebookApp] Kernel started: b6566ed5-8d24-47ca-8c1a-053ee83a8442
+[W 20:56:33.988 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190302015900 (127.0.0.1) 2.58ms referer=http://localhost:8888/notebooks/GenerateSpectrumUrban.ipynb
+[I 20:56:34.327 NotebookApp] Adapting to protocol v5.1 for kernel b6566ed5-8d24-47ca-8c1a-053ee83a8442
+[W 20:56:55.913 NotebookApp] 404 GET /api/contents/GenerateSpectrumUrbanFasterAudio.ipynb?type=notebook&content=0&_=1551578193121 (127.0.0.1): No such file or directory: GenerateSpectrumUrbanFasterAudio.ipynb
+[W 20:56:55.914 NotebookApp] No such file or directory: GenerateSpectrumUrbanFasterAudio.ipynb
+[W 20:56:55.914 NotebookApp] 404 GET /api/contents/GenerateSpectrumUrbanFasterAudio.ipynb?type=notebook&content=0&_=1551578193121 (127.0.0.1) 2.28ms referer=http://localhost:8888/notebooks/GenerateSpectrumUrban.ipynb
+[I 20:56:55.933 NotebookApp] Uploading file to /GenerateSpectrumUrbanFasterAudio.ipynb
+[W 20:56:55.934 NotebookApp] Notebook GenerateSpectrumUrbanFasterAudio.ipynb is not trusted
+[I 20:58:37.688 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[W 20:58:37.689 NotebookApp] Notebook GenerateSpectrumUrbanFasterAudio.ipynb is not trusted
+[I 20:59:43.998 NotebookApp] Starting buffering for 0357ee93-3e6a-493e-850d-72a33ecc14bb:62e352b9f6e34d548cffe37273e3284a
+[I 21:00:33.992 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[W 21:00:33.992 NotebookApp] Notebook GenerateSpectrumUrbanFasterAudio.ipynb is not trusted
+[I 21:02:25.450 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[W 21:02:25.450 NotebookApp] Notebook GenerateSpectrumUrbanFasterAudio.ipynb is not trusted
+[I 21:02:32.722 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[W 21:02:32.722 NotebookApp] Notebook GenerateSpectrumUrbanFasterAudio.ipynb is not trusted
+[I 21:02:33.962 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[W 21:02:33.962 NotebookApp] Notebook GenerateSpectrumUrbanFasterAudio.ipynb is not trusted
+[I 21:04:33.963 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[W 21:04:33.964 NotebookApp] Notebook GenerateSpectrumUrbanFasterAudio.ipynb is not trusted
+[W 21:05:20.064 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190302015900 (127.0.0.1) 2.80ms referer=http://localhost:8888/notebooks/UrbanSoundTraining.ipynb
+[I 21:05:20.123 NotebookApp] Adapting to protocol v5.1 for kernel 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 21:05:54.834 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[W 21:05:54.835 NotebookApp] Notebook GenerateSpectrumUrbanFasterAudio.ipynb is not trusted
+[I 21:06:33.971 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[W 21:06:33.972 NotebookApp] Notebook GenerateSpectrumUrbanFasterAudio.ipynb is not trusted
+[I 21:07:02.649 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[W 21:07:02.650 NotebookApp] Notebook GenerateSpectrumUrbanFasterAudio.ipynb is not trusted
+[I 21:08:36.240 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[W 21:08:36.240 NotebookApp] Notebook GenerateSpectrumUrbanFasterAudio.ipynb is not trusted
+[I 21:10:36.264 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[W 21:10:36.265 NotebookApp] Notebook GenerateSpectrumUrbanFasterAudio.ipynb is not trusted
+[I 21:12:36.246 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:14:36.246 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:16:36.520 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:18:36.525 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:19:22.531 NotebookApp] Kernel interrupted: b6566ed5-8d24-47ca-8c1a-053ee83a8442
+[I 21:20:36.515 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:22:36.517 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:24:36.523 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:26:36.533 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:27:39.456 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:27:58.474 NotebookApp] Kernel interrupted: b6566ed5-8d24-47ca-8c1a-053ee83a8442
+[I 21:28:36.543 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:30:35.199 NotebookApp] Kernel interrupted: b6566ed5-8d24-47ca-8c1a-053ee83a8442
+[I 21:30:36.552 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:30:40.875 NotebookApp] Kernel interrupted: b6566ed5-8d24-47ca-8c1a-053ee83a8442
+[I 21:32:36.552 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:34:36.557 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:36:36.561 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:40:42.959 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:42:42.936 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:44:06.197 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:44:42.928 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:44:48.599 NotebookApp] Kernel interrupted: b6566ed5-8d24-47ca-8c1a-053ee83a8442
+[I 21:46:47.871 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:48:47.869 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:50:47.931 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:52:48.014 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:54:48.227 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:56:48.227 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 21:58:48.256 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 22:01:03.638 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 22:03:03.827 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 22:05:06.621 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 22:07:51.010 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 22:16:04.243 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 22:16:40.691 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 22:17:41.414 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 22:19:41.618 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 22:21:41.618 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[W 22:24:50.126 NotebookApp] WebSocket ping timeout after 119996 ms.
+[I 22:24:55.128 NotebookApp] Starting buffering for 0357ee93-3e6a-493e-850d-72a33ecc14bb:026c46d85a904a7f82b3e146f5f62447
+[W 22:25:04.330 NotebookApp] WebSocket ping timeout after 119995 ms.
+[E 22:25:04.655 NotebookApp] Uncaught exception in ZMQStream callback
+    Traceback (most recent call last):
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+        callback(*args, **kwargs)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/websocket.py", line 259, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 22:25:04.670 NotebookApp] Uncaught exception in zmqstream callback
+    Traceback (most recent call last):
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 450, in _handle_events
+        self._handle_recv()
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 480, in _handle_recv
+        self._run_callback(callback, msg)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+        callback(*args, **kwargs)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/websocket.py", line 259, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+ERROR:asyncio:Exception in callback BaseAsyncIOLoop._handle_events(40, 1)
+handle: <Handle BaseAsyncIOLoop._handle_events(40, 1)>
+Traceback (most recent call last):
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/platform/asyncio.py", line 122, in _handle_events
+    handler_func(fileobj, events)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 450, in _handle_events
+    self._handle_recv()
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 480, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+    self.on_recv(lambda msg: callback(self, msg), copy=copy)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+    super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+    self.write_message(msg, binary=isinstance(msg, bytes))
+  File "/home/far-lab/.conda/envs/torch/lib/python3.7/site-packages/tornado/websocket.py", line 259, in write_message
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[I 22:25:09.332 NotebookApp] Starting buffering for b6566ed5-8d24-47ca-8c1a-053ee83a8442:2d6f37088ced4d48895ec9e35efcfaf1
+[I 22:41:29.060 NotebookApp] Adapting to protocol v5.1 for kernel b6566ed5-8d24-47ca-8c1a-053ee83a8442
+[I 22:41:29.064 NotebookApp] Discarding 2637 buffered messages for b6566ed5-8d24-47ca-8c1a-053ee83a8442:2d6f37088ced4d48895ec9e35efcfaf1
+[W 22:41:29.089 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190302015900 (127.0.0.1) 4.96ms referer=http://localhost:8888/notebooks/GenerateSpectrumUrbanFasterAudio.ipynb
+[I 22:42:11.400 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 22:42:14.569 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[I 22:42:18.514 NotebookApp] Starting buffering for b6566ed5-8d24-47ca-8c1a-053ee83a8442:9f5885df6c514acbb141302c66d8a6ab
+[I 22:42:19.574 NotebookApp] Adapting to protocol v5.1 for kernel b6566ed5-8d24-47ca-8c1a-053ee83a8442
+[W 22:42:19.604 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190302015900 (127.0.0.1) 2.76ms referer=http://localhost:8888/notebooks/GenerateSpectrumUrbanFasterAudio.ipynb
+[I 22:44:21.910 NotebookApp] Saving file at /GenerateSpectrumUrbanFasterAudio.ipynb
+[W 22:45:03.328 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190302015900 (127.0.0.1) 2.92ms referer=http://localhost:8888/notebooks/UrbanSoundTraining.ipynb
+[I 22:45:03.349 NotebookApp] Adapting to protocol v5.1 for kernel 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 22:45:26.564 NotebookApp] Starting buffering for 0357ee93-3e6a-493e-850d-72a33ecc14bb:553146da7ff94f52b0d40b0c1049c364
+[I 22:45:28.388 NotebookApp] Kernel restarted: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 22:45:29.229 NotebookApp] Adapting to protocol v5.1 for kernel 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 22:45:29.230 NotebookApp] Restoring connection for 0357ee93-3e6a-493e-850d-72a33ecc14bb:553146da7ff94f52b0d40b0c1049c364
+[I 22:45:29.230 NotebookApp] Replaying 3 buffered messages
+[I 22:47:03.595 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 22:49:03.551 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 22:51:03.559 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 22:52:14.400 NotebookApp] Starting buffering for b6566ed5-8d24-47ca-8c1a-053ee83a8442:e78bd68f95b34e6b8d37e8b770d3d3e1
+[I 22:53:04.794 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 22:55:06.798 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 22:57:06.973 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:00:09.117 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:03:33.249 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:05:36.128 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:07:34.711 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:09:37.825 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:11:37.825 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:13:37.605 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:15:37.823 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:18:33.705 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:20:33.745 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:22:37.471 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:25:54.904 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:29:14.908 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:32:34.878 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:34:34.887 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:36:54.878 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:39:14.868 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:42:43.568 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:46:04.736 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:49:14.801 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:51:14.742 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:53:20.242 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:55:29.226 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:57:29.440 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 23:59:47.375 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 00:02:34.703 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 00:05:56.120 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 00:09:14.757 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 00:12:39.138 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 00:15:54.723 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 00:19:14.759 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 00:22:34.735 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
+[I 00:23:58.416 NotebookApp] Kernel interrupted: 0357ee93-3e6a-493e-850d-72a33ecc14bb
+[I 00:24:34.799 NotebookApp] Saving file at /UrbanSoundTraining.ipynb
