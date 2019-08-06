@@ -39,7 +39,7 @@ A lot of data sets do not come structured in the way we described above. Instead
 
 For our algorithms to understand the data, we need to write small scripts that moves the data into the folder structure mentioned above. 
 
-Have a look at the **/Transforming Datasets.ipynb** notebook in the `04_ProcessingData` folder. There we provide scripts to sort files into folders; this is used to process datasets like the urban-sounds dataset.
+Have a look at the **Transforming Datasets.ipynb** notebook in the `04_ProcessingData` folder. There we provide scripts to sort files into folders; this is used to process datasets like the urban-sounds dataset.
 
 Handy Links
 https://stackoverflow.com/questions/8858008/how-to-move-a-file-in-python how to move a file in python
