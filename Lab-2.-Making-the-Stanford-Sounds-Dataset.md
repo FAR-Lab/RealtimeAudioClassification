@@ -1,6 +1,6 @@
 The data that goes into the neural network is instrumental to what you can get out of it. This lab is focused on helping us to understand the curation of audio data. 
 
-As a group, you will all canvas the campus to capture interesting  sounds. This endeavor is the beginning of what we hope will be a larger effort to make a Stanford equivalent to the Urban Sounds Dataset. There is not, as yet, a dataset focused on the sounds that we might find on a college campus, and yet, that is where most of the machine learning researchers live. 
+As a group, you will all canvas the campus to capture interesting  sounds. This endeavor is the beginning of what we hope will be a larger effort to make a Stanford equivalent to the [Urban Sounds Dataset](https://urbansounddataset.weebly.com/urbansound.html). There is not, as yet, a dataset focused on the sounds that we might find on a college campus, and yet, that is where most of the machine learning researchers live. 
 
 ## Sources
 
@@ -39,7 +39,7 @@ Sounds uploaded to the [freesound](http://freesound.org) site have the following
 
 An important thing to do before setting out is to record some clips around CCRMA, come back, upload the data, and check the sound quality. This helps to make sure that you do not come back from your treks empty-handed, and gives everyone some practice with the overall data capture workflow.
 
-Download the snapshots from the phone and the audio files. The synchronized timestamps for date created should help you match the image to the sound file.
+Download the snapshots from the phone and the audio files. The synchronized timestamps for "date created" should help you match the image to the sound file.
 
 ## Go Forth
 
