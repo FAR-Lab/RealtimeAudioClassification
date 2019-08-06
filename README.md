@@ -14,8 +14,5 @@ In this workshop, we will teach you how to design audio classifiers using neural
 | noon-1:30 | Lunch  | Lunch | Lunch  | Lunch  | Lunch  |
 |1:30-3:30 | Lab Setup | Stanford Sounds Dataset Activity | Urban Sounds Dataset Lab | Final Project | Project Time/ Show and Tell |
 |3:30-5pm| Cats & Dogs Lab| Stanford Sounds Dataset Activity| Plotting Final Project | Final Project | Happy Hour |
-## Labs
 
-[Lab 0. Setting up](Lab-0.-Setting-up)
-
-[Lab 1. Cats and Dogs--binary classification](Lab-1.-Cats-and-Dogs--binary-classification)
+See the workshop [Wiki](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki) for Lab and Lectures.
