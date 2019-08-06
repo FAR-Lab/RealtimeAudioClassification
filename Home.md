@@ -25,3 +25,8 @@ Lab 2. Making the Stanford Sounds Dataset
 Lab 3. Urban Sounds Dataset--audio recognition
 
 Lab 4. Making stuff interactive
+
+## Lecture Slides
+
+Introduction
+[The Bitter Lesson](images/Day1bBitterLesson.pdf)
