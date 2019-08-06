@@ -20,7 +20,7 @@ In this workshop, we will teach you how to design audio classifiers using neural
 
 [Lab 1. Cats and Dogs--binary classification](Lab-1.-Cats-and-Dogs--binary-classification)
 
-Lab 2. Making the Stanford Sounds Dataset
+[Lab 2. Making the Stanford Sounds Dataset](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki/Lab-2.-Making-the-Stanford-Sounds-Dataset)
 
 Lab 3. Urban Sounds Dataset--audio recognition
 
