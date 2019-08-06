@@ -1,6 +1,6 @@
 The data that goes into the neural network is instrumental to what you can get out of it. This lab is focused on helping us to understand the curation of audio data. 
 
-As a group, you will all canvas the campus to capture interesting  sounds. This endeavor is the beginning of what we hope will be a larger effort to make a Stanford equivalent to the Urban Sounds Dataset. There is not, as yet, a dataset focused on the sounds that we might find on a college campus, and yet, that is where most of thee machine learning researchers live. 
+As a group, you will all canvas the campus to capture interesting  sounds. This endeavor is the beginning of what we hope will be a larger effort to make a Stanford equivalent to the Urban Sounds Dataset. There is not, as yet, a dataset focused on the sounds that we might find on a college campus, and yet, that is where most of the machine learning researchers live. 
 
 ## Sources
 
@@ -10,7 +10,7 @@ Our goal will to be to collect ~1000 field recordings in ~10 categories, based a
 
 ## Recording Tools
 
-One thing that we will experiment with using different audio collection tools. Ideally within each team there will be some people collecting audio with their phones and others collecting it with the handy recorder. This variety of recording methods will help to introduce some of the artifacts/noise that will help to make subsequent algorithms built on our data robust to variations in recording method. 
+One thing that we will experiment with is using different audio collection tools. Ideally within each team there will be some people collecting audio with their phones and others collecting it with the handy recorder. This variety of recording methods will help to introduce some of the artifacts/noise that will help to make subsequent algorithms built on our data robust to variations in recording method. 
 
 One thing that will be important will be to record how the data is collected, so take notes before or after so we can describe the process clearly.
 
