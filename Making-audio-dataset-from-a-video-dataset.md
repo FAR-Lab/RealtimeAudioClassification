@@ -1,1 +1,0 @@
-Also in the `Transforming Datasets.ipynb` notebook in the `04_ProcessingData` folder is a script to Extract audio from mp4 video. This makes it possible to transform a video dataset into an audio dataset.
