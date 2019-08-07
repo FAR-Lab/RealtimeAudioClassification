@@ -146,7 +146,7 @@ stream = None
 
 def RunProgram(targetLength=20,AmmountOfClassesToDisplay=2,ModelPath="../models/CatDogResNet.pth"):
     print("Loading Model");
-    LoadModel(ModelPath="../models/CatDogResNet.pth")
+    LoadModel(ModelPath=ModelPath)
     print("Opening Audio Channel");
     cv2.startWindowThread()
     global stream
