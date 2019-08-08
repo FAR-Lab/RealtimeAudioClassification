@@ -10,7 +10,9 @@ import matplotlib.pyplot as plt
 import pyaudio
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 from torchvision import datasets, transforms, models
+
 import torchvision
 import time
 from  numpy_ringbuffer import RingBuffer
@@ -93,7 +95,7 @@ def callback(in_data, frame_count, time_info, flag):
     ringBuffer.extend(audio_data)
     return None, pyaudio.paContinue
 
-def infere_Class_Type(CallBack):
+def infere_Class_Type(CallBack,CallBack2):
     if(not ringBuffer.is_full):
         return
     N_FFT=SpectrumVariables["N_FFT"]
@@ -126,10 +128,15 @@ def infere_Class_Type(CallBack):
     imagesTensor = Variable(imagesTensor, requires_grad=False)
     testImages = imagesTensor.unsqueeze(0)
     outputs = model(testImages)
+    outputs = F.softmax(outputs)
     prob, predicted = torch.topk(outputs,len(classes))
-    predicted=predicted[0].numpy()
-    prob=prob[0].detach().numpy()
-    SmoothingFunction(classes[predicted[0]],prob[0],CallBack)
+    #print(predicted[:2],prob[:2])
+    if(not CallBack2==None):
+        CallBack2(predicted,prob,classes)
+    else:
+        predicted=predicted[0].numpy()
+        prob=prob[0].detach().numpy()
+        SmoothingFunction(classes[predicted[0]],prob[0],CallBack)
 
 def StopAudio():
     global pa
@@ -150,13 +157,13 @@ def DoStuff(Input,Probablity):
         print("I heard a "+str(Input))
         timer=50
 
-def RunTheSystem(TargetTime=30,ModelPath = "../models/UrbanResNet.pth",CallBackFunction=DoStuff):
+def RunTheSystem(TargetTime=30,ModelPath = "../models/UrbanResNet.pth",CallBackFunction=DoStuff,CallBack2=None):
     print("Loading all relevant data.")
     StartAudio(ModelPath=ModelPath)
     print("Starting Running")
     t0 = time.time()
     while stream.is_active():
-        infere_Class_Type(CallBackFunction)
+        infere_Class_Type(CallBackFunction,CallBack2)
         if (TargetTime>0 )and ((time.time()-t0)>=TargetTime):
             break
     print("Stopping!")
