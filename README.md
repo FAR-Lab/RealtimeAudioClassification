@@ -1,4 +1,4 @@
-a.k.a.
+[Github Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
 ## Realtime Audio Classification for Musicians
 (As an homage to [Tensorflow for Poets](https://codelabs.developers.google.com/codelabs/tensorflow-for-poets/#0).)
 

@@ -81,7 +81,7 @@ def callback(in_data, frame_count, time_info, flag):
 
 def infere_Class_Type(NumOutput):
     if(not ringBuffer.is_full):
-        return 0 ;
+        return;
     
     N_FFT=SpectrumVariables["N_FFT"]
     HOP_LENGTH= SpectrumVariables["HOP_LENGTH"]
@@ -105,12 +105,12 @@ def infere_Class_Type(NumOutput):
     img = image.astype(np.uint8)
     colerPic = cv2.applyColorMap(img, cv2.COLORMAP_BONE)
     if(int(np.floor(colerPic.shape[1]/Input_Resolution))<0):
-        return 0 ;
+        return;
     
     OutputImage = cv2.resize(colerPic[:,-Input_Resolution:,:],(Input_Resolution,Input_Resolution))
    
     if(OutputImage.shape[1]<Input_Resolution):
-        return 0 ;
+        return;
     imagesTensor = transform(OutputImage)
     imagesTensor = Variable(imagesTensor, requires_grad=False)
     testImages = imagesTensor.unsqueeze(0)
@@ -130,31 +130,23 @@ def infere_Class_Type(NumOutput):
         if(j>=NumOutput):
             break;
         print('Predicted:\t{} \t| Probablilty: \t{:.2f}'.format(classes[predicted[j]],prob[j]))
-    return prob[0]
 
 
 
 def startProgram(targetLength=20,NumOutput=2):
     stream.start_stream()
     t0 = time.time()
-    arrayPred=[]
-    arrayProp=[]
     while stream.is_active():
         tStart=time.time()
-        a=infere_Class_Type(NumOutput)
-        #arrayPred.append(a)
-        arrayProp.append(a)
+        infere_Class_Type(NumOutput)
         if ( targetLength>0 )and ( (time.time()-t0)>=targetLength):
             break;
-    #print(arrayPred)
-    #print('--')
-    return arrayProp
 
 stream = None
 
 def RunProgram(targetLength=20,AmmountOfClassesToDisplay=2,ModelPath="../models/CatDogResNet.pth"):
     print("Loading Model");
-    LoadModel(ModelPath=ModelPath)
+    LoadModel(ModelPath="../models/CatDogResNet.pth")
     print("Opening Audio Channel");
     cv2.startWindowThread()
     global stream
@@ -167,14 +159,13 @@ def RunProgram(targetLength=20,AmmountOfClassesToDisplay=2,ModelPath="../models/
                      input=True,
                      stream_callback=callback)
     print("Starting Running")
-    array = startProgram(targetLength=targetLength,NumOutput=AmmountOfClassesToDisplay)
+    startProgram(targetLength=targetLength,NumOutput=AmmountOfClassesToDisplay)
     print("Stopping!")
     time.sleep(1)
     pa.terminate()
     stream.close()
     cv2.destroyAllWindows()
     print("Stopped and Done!")
-    return array
 
 def imshow(img):
     img = img / 2 + 0.5     # unnormalize
