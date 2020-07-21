@@ -12,7 +12,7 @@ In this workshop, we will teach you how to design audio classifiers using neural
 | 9am | Introductions  | Review/Q&A | Review/Q&A | Review/Q&A | Review/Q&A |
 | 10-noon | Neural Nets  | Collecting & Analyzing Sounds | Designing Interaction | Generative Models | Project time |
 | noon-1:30 | Lunch  | Lunch | Lunch  | Lunch  | Lunch  |
-|1:30-3:30 | Lab Setup | Stanford Sounds Dataset Activity | Urban Sounds Dataset Lab | Final Project | Project Time/ Show and Tell |
-|3:30-5pm| Cats & Dogs Lab| Stanford Sounds Dataset Activity| Plotting Final Project | Final Project | Happy Hour |
+|1:30-3:30 | Lab Setup | Home Sounds Dataset Activity | Urban Sounds Dataset Lab | Final Project | Project Time/ Show and Tell |
+|3:30-5pm| Cats & Dogs Lab| Home Sounds Dataset Activity| Plotting Final Project | Final Project | Happy Hour |
 
 See the workshop [Wiki](https://github.com/DavidGoedicke/RealtimeAudioClassification/wiki) for Lab and Lectures.
