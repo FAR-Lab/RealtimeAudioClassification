@@ -10,7 +10,7 @@ In this workshop, we will teach you how to design audio classifiers using neural
 | Time | Monday | Tuesday | Wednesday | Thursday | Friday |
 | ------------- | ------------- |------------- |------------- |------------- |------------- |
 | 9am | Introductions  | Review/Q&A | Review/Q&A | Review/Q&A | Review/Q&A |
-| 10-noon | Neural Nets  | Collecting & Analyzing Sounds | Designing Interaction | Generative Models | Project time |
+| 10-noon | Neural Nets  | Collecting & Analyzing Sounds | Designing Interaction | Applications of AI for Sound | Project time |
 | noon-1:30 | Lunch  | Lunch | Lunch  | Lunch  | Lunch  |
 |1:30-3:30 | Lab Setup | Home Sounds Dataset Activity | Wizard Lab | Final Project | Project Time/ Show and Tell |
 |3:30-5pm| Cats & Dogs Lab| Home Sounds Dataset Activity| Plotting Final Project | Final Project | Happy Hour |
