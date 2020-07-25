@@ -14,14 +14,17 @@ import ipywidgets as widgets
 from PIL import Image
 import IPython.display as displayImg
 
-
 from ipywidgets import interact, widgets
 import glob
 import IPython.display as ipd
 
 import sys
 
-
+def imshow(img):
+    img = img / 2 + 0.5     # unnormalize
+    npimg = img.numpy()
+    plt.imshow(np.transpose(npimg, (1, 2, 0)))
+    plt.show()
 
 def listdir_nohidden(path):
     return glob.glob(os.path.join(path, '*'))
@@ -67,12 +70,13 @@ def log_mel_spec_tfm(dataInput):
     for pic in pictures:
         plt.imsave(os.path.join(dst_path,(fname.replace(".flac",'-')\
                                           .replace(".aif",'-').replace(".wav",'-')\
-                                          .replace(".m4a",'-').replace(".mp3",'-')+str(count)+'.png')), pic)
+                                          .replace(".m4a",'-').replace(".mp3",'-')\
+                                          +str(count)+'.png')), pic)
         count+=1
     if(count==0):
         print(src_path)
 
-        
+
 try:
     Type
 except NameError:
@@ -98,3 +102,41 @@ else:
         display(ClassSelection)
         display(FileSelection)
         updateLocation();
+    elif(Type=="TRAINING"):
+        SPECTRUM_IMAGES_ROOT="../GeneratedData/"
+        class SpectrumDataset(torch.utils.data.Dataset):
+            """Face Landmarks dataset."""
+            def __init__(self,ClassName,root_dir,transform=None):
+                """
+                Args:
+                    root_dir (string): Directory with all the images.
+                    transform (callable, optional): Optional transform to be applied
+                        on a sample.
+                """
+                self.root_dir = root_dir
+                self.ClassName=ClassName
+                self.fileList= [f for f in os.listdir(root_dir) if f.endswith('.png')]
+                print(root_dir,len(self.fileList))
+                self.transform = transform
+            def __len__(self):
+                return len(self.fileList)
+            def __getitem__(self, idx):
+                if torch.is_tensor(idx):
+                    idx = idx.tolist()
+                img_path = os.path.join(self.root_dir,
+                                        self.fileList[idx])
+                image = Image.open(img_path)
+                image=image.convert('RGB')
+                if self.transform:
+                    image = self.transform(image)
+                return image,self.ClassName
+        classes = [os.path.split(c)[1] for c in listdir_nohidden(SPECTRUM_IMAGES_ROOT)]
+        widgetDict={}
+        print("Select classes to use for training:");
+        for c in classes:
+            widgetDict[c]=widgets.Checkbox(
+            value=False,
+            description=c,
+            disabled=False,
+            indent=False)
+            display(widgetDict[c])
