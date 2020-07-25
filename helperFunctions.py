@@ -1,6 +1,7 @@
 from __future__ import print_function
 import csv
 import numpy as np
+import random
 import librosa
 import wave
 import os
@@ -118,6 +119,8 @@ else:
                 self.fileList= [f for f in os.listdir(root_dir) if f.endswith('.png')]
                 print(root_dir,len(self.fileList))
                 self.transform = transform
+            def ReduceSize(self,ItemCount):
+                self.fileList = random.choices(self.fileList, k=ItemCount)
             def __len__(self):
                 return len(self.fileList)
             def __getitem__(self, idx):

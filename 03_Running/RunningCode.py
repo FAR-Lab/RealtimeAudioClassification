@@ -29,7 +29,7 @@ from  numpy_ringbuffer import RingBuffer
 
 from torch.autograd import Variable
 SpectrumVariables=None
-ringBuffer = RingBuffer(22500)
+ringBuffer = RingBuffer(44100*1)
 buffer = queue.Queue()
 pa = None
 stream = None
@@ -101,7 +101,7 @@ def infere_Class_Type(CallBack):
     outputs = model(Variable(imagesTensor, requires_grad=False).unsqueeze(0))
     outputs = F.softmax(outputs)
     prob, predicted = torch.topk(outputs,len(classes))
-    CallBack(predicted,prob,classes)
+    CallBack(predicted[0].detach().numpy(),prob[0].detach().numpy(),classes)
 
 
 def StopAudio():
