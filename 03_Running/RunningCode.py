@@ -163,18 +163,14 @@ def infere_Class_For_File(FilePath):
                                                 hop_length=HOP_LENGTH,
                                                 n_mels=N_MELS, power=POWER,
                                                 fmin=FMIN,fmax=FMAX)
-    mel_spec_db = librosa.power_to_db(mel_spec_power, ref=np.max)
-    image=mel_spec_db[0:Input_Resolution,0:Input_Resolution]
-    image = mel_spec_db; # convert to float
-    image -= image.min() # ensure the minimal value is 0.0
-    image /= image.max() # maximum value in image is now 1.0
-    image*=256
-    img = image.astype(np.uint8)
-    colerPic = cv2.applyColorMap(img, cv2.COLORMAP_BONE)
-    for i in range(int(np.floor(colerPic.shape[1]/RESOLUTION))):
+    mel_spec_db = np.float32(librosa.power_to_db(mel_spec_power, ref=np.max))
+    mel_spec_db-=mel_spec_db.min()
+    mel_spec_db/=mel_spec_db.max()
+    im = np.uint8(cm.gist_earth(mel_spec_db)*255)[:,:,:3]
+    for i in range(int(np.floor(im.shape[1]/RESOLUTION))):
         startx=RESOLUTION*i
         stopx=RESOLUTION*(i+1)
-        OutputImage = cv2.resize(colerPic[:,startx:stopx,:],(RESOLUTION,RESOLUTION))
+        OutputImage = im[:,startx:stopx,:]
         imagesTensor = transforms.Compose([transforms.ToPILImage(),
             transforms.ToTensor(),
             transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])(OutputImage)
