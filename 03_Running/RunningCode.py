@@ -115,7 +115,7 @@ def RunTheSystem(CallBackFunction,TargetTime=30,ModelPath = "../models/UrbanResN
     print("Loading all relevant data.")
     LoadModel(ModelPath=ModelPath)
     SpectrumVariables={}
-    with open('../SpectrumVarialbes.csv', newline='') as csvfile:
+    with open('../SpectrumVariables.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             for k in row:

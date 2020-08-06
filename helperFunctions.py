@@ -32,7 +32,7 @@ def listdir_nohidden(path):
 
 def GenerateSpectrums(MainFile):
     SpectrumVariables={}
-    with open('../SpectrumVarialbes.csv', newline='') as csvfile:
+    with open('../SpectrumVariables.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             for k in row:
